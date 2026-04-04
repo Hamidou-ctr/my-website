@@ -4,14 +4,27 @@
   >
     <h1 class="text-2xl font-bold">Hamidou</h1>
     <div
-      class="space-x-4 xxs:space-x-2 xs:space-x-4 sm:space-x-6 md:space-x-8 lg:space-x-10 xl:space-x-12 2xl:space-x-16"
+      class="hidden sm:flex space-x-4 xxs:space-x-2 xs:space-x-4 sm:space-x-6 md:space-x-8 lg:space-x-10 xl:space-x-12 2xl:space-x-16"
     >
-      <a href="/" class="hover:underline">Home</a>
-      <a href="/" class="hover:underline">About</a>
-      <a href="/" class="hover:underline">Contact</a>
+      <a href="/" class="hover:underline">About me</a>
+      <a href="/" class="hover:underline">Skills</a>
+      <a href="/" class="hover:underline">Portfolio</a>
     </div>
 
-    <img src="img/burger_menu.png" alt="Burger Menu" class="w-6 h-6 cursor-pointer md:hidden" />
+    <img
+      onclick="document.querySelector('dialog').showModal()"
+      src="img/burger_menu.png"
+      alt="Burger Menu"
+      class="w-6 h-6 cursor-pointer sm:hidden"
+    />
 
+    <dialog class="w-screen h-screen flex flex-col justify-center items-center rounded-lg bg-[#141D2FCC] text-white sm:hidden">
+      <button onclick="document.querySelector('dialog').close()">X</button>
+      <div class="flex flex-col items-start gap-4 p-4">
+        <a href="/" class="hover:underline">About me</a>
+        <a href="/" class="hover:underline">Skills</a>
+        <a href="/" class="hover:underline">Portfolio</a>
+      </div>
+    </dialog>
   </nav>
 </div>
