@@ -1,6 +1,7 @@
 .personal-image {
   background-image: url('../../../../public/img/photo_shadows.png');
-  background-size: 50%, 50%;
+  background-size: calc(640px + 2rem);
+  object-position: center;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
