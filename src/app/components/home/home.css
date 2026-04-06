@@ -1,8 +1,27 @@
 .personal-image {
   background-image: url('../../../../public/img/photo_shadows.png');
-  background-size: calc(640px + 2rem);
+  background-size: calc(100vw + 2rem);
   object-position: center;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+@media screen and (min-width: 641px) {
+  .personal-image {
+    background-size: calc(100vw + 8rem);
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .personal-image {
+    background-size: calc(100vw + 5rem);
+    background-attachment: scroll;
+  }
+}
+
+/*
+background-size: calc(var(--breakpoint-md) + 2rem);
+
+*/
