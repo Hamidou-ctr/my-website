@@ -1,24 +1,12 @@
 .personal-image {
   background-image: url('../../../../public/img/photo_shadows.png');
-  background-size: calc(100vw + 2rem);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: calc(100vw + 2rem);
 }
 
-@media screen and (min-width: 800px) {
-  .personal-image {
-    background-size: 0.5vw;
-    background-attachment: scroll;
-  }
-}
-
-@media screen and (min-width: 641px) {
-  .personal-image {
-    background-size: 80vw;
-    background-attachment: scroll;
-  }
-}
+/* Mobile First */
 
 @media screen and (max-width: 640px) {
   .personal-image {
@@ -27,7 +15,50 @@
   }
 }
 
-/*
-background-size: calc(var(--breakpoint-md) + 2rem);
+@media screen and (min-width: 800px) and (max-width: 859px) {
+  .personal-image {
+    background-size: 50vw;
+    background-attachment: scroll;
+    background-position-y: top;
+  }
+}
 
-*/
+@media screen and (min-width: 860px) and (max-width: 967px) {
+  .personal-image {
+    background-size: 38vw;
+    background-attachment: scroll;
+    background-position-y: top;
+  }
+}
+
+@media screen and (min-width: 968px) and (max-width: 991px) {
+  .personal-image {
+    background-size: 45vw;
+    background-attachment: scroll;
+    background-position-y: top;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .personal-image {
+    background-size: calc(35vw + 1rem);
+    background-attachment: scroll;
+    background-position-y: top;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .personal-image {
+    background-size: calc(30vw + 1rem);
+    background-attachment: scroll;
+    background-position-y: top;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .personal-image {
+    background-size: 690px;
+    background-attachment: scroll;
+    background-position-y: top;
+  }
+}
