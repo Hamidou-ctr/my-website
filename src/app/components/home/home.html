@@ -4,7 +4,7 @@
   >
     <img
       src="img/profil1.png"
-      class="personal-image object-scale-down h-[calc(100vh-330px)] md:max-h-[calc(100vh-250px)] tb:h-[calc(100vh-200px)] tb:ml-8"
+      class="personal-image object-scale-down h-[calc(100vh-330px)] md:max-h-250 tb:h-[calc(100vh-200px)] tb:ml-8"
       alt="Profile picture of Hamidu Diallo"
     />
     <main class="flex flex-col justify-center items-center text-white tb:flex-1 tb:mr-10">
@@ -28,24 +28,31 @@
         </div>
       </div>
       <a href="mailto:hamiduguinea@gmail.com">
-        <button class="bg-[#70E61C] hover:bg-[#9747FF] text-white text-2xl mt-4 px-7 py-4 rounded-xl">
+        <button
+          class="bg-[#70E61C] hover:bg-[#9747FF] text-white text-2xl mt-4 px-7 py-4 rounded-xl"
+        >
           Let’s talk!
         </button>
       </a>
     </main>
   </section>
 
-  <section class="w-screen flex justify-center items-center text-white mt-8">
+  <section class="w-screen flex justify-center items-center text-white absolute bottom-0">
     <p class="bg-[#9747FF] w-[25%] sm:w-25 h-1 2xl:flex-1"></p>
     <div class="flex-1 2xl:min-w-335 flex justify-between items-center">
       <div class="flex items-center gap-[100%] ml-[10%] sm:gap-4 sm:ml-4">
-        <img src="img/github_button.png" class="w-8" alt="" />
-        <img src="img/email_button.png" class="w-8" alt="" />
+        <a href="https://github.com/Hamidou-ctr" target="_blank" rel="noopener noreferrer">
+          <img src="img/github_button.png" class="w-8" alt="" />
+        </a>
+        <a href="mailto:hamiduguinea@gmail.com" target="_blank" rel="noopener noreferrer">
+          <img src="img/email_button.png" class="w-8" alt="" />
+        </a>
+
         <a class="hidden sm:inline text-2xl font-normal" href="mailto:hamiduguinea@gmail.com"
           >hamiduguinea@gmail.com</a
         >
       </div>
-      <p class="hidden md:inline text-2xl font-normal rotate-90"> Scroll down &rarr;</p>
+      <p class="rotate-90 hidden md:inline text-2xl font-normal mb-16">Scroll down &rarr;</p>
     </div>
     <p class="hidden 2xl:block 2xl:flex-1"></p>
   </section>
