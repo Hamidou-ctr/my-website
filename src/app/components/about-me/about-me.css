@@ -1,0 +1,23 @@
+@media screen and (min-width: 800px) {
+  section {
+    background-image: url('../../../../public/img/purple_shadow_about_me.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: clamp(50vw, 35vh, 100px) auto;
+    background-position: center right -300px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  section {
+    background-size: clamp(40vw, 35vh, 100px) auto;
+    background-position: center right -300px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  section {
+    background-position: center right -700px;
+    background-size: 70vw 45vh;
+  }
+}
