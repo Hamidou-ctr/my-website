@@ -3,7 +3,7 @@
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 150vw;
+  background-size: 100vw 50vh;
 }
 
 .personal-image {
@@ -11,26 +11,34 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 80vw;
+  background-size: 120vw;
 }
 
 /* Mobile First */
 
 @media screen and (min-width: 360px) {
-  .homeBackgroundImage {
-    background-size: 135vw 50vh;
-    background-attachment: fixed;
-    background-position-y: bottom;
-  }
-
   .personal-image {
-    background-size: 48vw;
+    background-size: 70vw;
+    background-attachment: scroll;
+    background-position-y: top;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .personal-image {
+    background-size: 60vw;
     background-attachment: scroll;
     background-position-y: top;
   }
 }
 
 @media screen and (min-width: 640px) {
+  .homeBackgroundImage {
+    background-size: 100vw 50vh;
+    background-attachment: fixed;
+    background-position-y: bottom;
+  }
+
   .personal-image {
     background-size: 38vw;
     background-attachment: scroll;
@@ -99,7 +107,7 @@
 
 @media screen and (min-width: 1200px) {
   .personal-image {
-    background-size: calc(30vw + 1rem);
+    background-size: calc(20vw + 1rem);
     background-attachment: scroll;
     background-position-y: top;
   }
@@ -107,7 +115,7 @@
 
 @media screen and (min-width: 1440px) {
   .personal-image {
-    background-size: 620px;
+    background-size: 490px;
     background-attachment: scroll;
     background-position-y: top;
   }
