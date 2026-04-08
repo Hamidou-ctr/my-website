@@ -20,34 +20,15 @@ export class Home implements AfterViewInit {
 
   checkOrientation() {
     const section = this.profileSection.nativeElement;
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
+    const isMobile = window.innerWidth <= 800;
+    const isPortrait = window.innerHeight > window.innerWidth;
 
-    // Unter 769px (bis 768px) immer column
-    if (viewportWidth <= 800) {
-      console.log('Unter 768px - Setze auf column');
-      section.style.flexDirection = 'column';
-      section.style.justifyContent = 'center';
-      section.style.alignItems = 'center';
-      return;
-    }
+    section.style.flexDirection = isMobile || isPortrait ? 'column' : 'row';
+    section.style.justifyContent = 'center';
+    section.style.alignItems = 'center';
 
-    // Ab 769px: Nach Bildschirmorientierung entscheiden
-    console.log('Viewport Höhe:', viewportHeight, 'Viewport Breite:', viewportWidth);
-    console.log('Ist höher als breit?', viewportHeight > viewportWidth);
-
-    if (viewportHeight > viewportWidth) {
-      // Bildschirm ist hochkant (portrait)
-      console.log('Setze auf column');
-      section.style.flexDirection = 'column';
-      section.style.justifyContent = 'center';
-      section.style.alignItems = 'center';
-    } else {
-      // Bildschirm ist querformat (landscape)
-      console.log('Setze auf row');
-      section.style.flexDirection = 'row';
+    if (!isMobile && !isPortrait) {
       section.style.justifyContent = 'space-between';
-      section.style.alignItems = 'center';
     }
   }
 }
