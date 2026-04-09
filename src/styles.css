@@ -17,10 +17,25 @@
   --breakpoint-2xl: 1440px;
 }
 
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #141d2f;
+}
+
+section {
+  scroll-margin-top: 60px;
 }

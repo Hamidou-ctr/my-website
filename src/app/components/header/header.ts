@@ -18,4 +18,9 @@ export class Header {
   closeMenu() {
     this.isMenuOpen = false;
   }
+
+  scrollTo(section: string) {
+    this.closeMenu();
+  document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+}
 }

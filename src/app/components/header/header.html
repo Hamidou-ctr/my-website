@@ -2,12 +2,14 @@
   <nav
     class="w-screen max-w-360 flex justify-between items-center gap-8 p-4 text-white relative bg-[#141d2f]"
   >
-    <h1 class="text-3xl font-bold">Hamidou</h1>
+    <a href="#app-home" (click)="scrollTo('app-home')">
+      <h1 class="text-3xl font-bold">Hamidou</h1>
+    </a>
 
     <!-- Desktop Menu -->
     <div class="hidden sm:flex space-x-16 justify-center items-center">
       <div class="flex gap-4">
-        <a href="/" class="text-2xl font-medium">About me</a>
+        <a href="#app-about-me" class="text-2xl font-medium">About me</a>
         <a href="/" class="text-2xl font-medium">Skills</a>
         <a href="/" class="text-2xl font-medium">Portfolio</a>
       </div>
@@ -52,7 +54,9 @@
         class="flex flex-col justify-center items-center gap-8"
         (click)="$event.stopPropagation()"
       >
-        <a href="/" class="text-white text-2xl hover:underline" (click)="closeMenu()">About me</a>
+        <a class="text-white text-2xl hover:underline" (click)="scrollTo('app-about-me')"
+          >About me</a
+        >
         <a href="/" class="text-white text-2xl hover:underline" (click)="closeMenu()">Skills</a>
         <a href="/" class="text-white text-2xl hover:underline" (click)="closeMenu()">Portfolio</a>
         <a href="/" class="text-white text-2xl hover:underline" (click)="closeMenu()">Contact</a>
