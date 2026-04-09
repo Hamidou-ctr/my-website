@@ -61,7 +61,7 @@
     <!-- Mobile Popup Menu -->
     <div
       *ngIf="isMenuOpen"
-      class="fixed inset-0 bg-[#141D2FCC] flex flex-col justify-center items-center z-50 transition-all duration-300"
+      class="fixed inset-0 bg-[#141D2FCC] flex flex-col justify-center items-center z-50 transition-all duration-300 sm:hidden"
       (click)="closeMenu()"
     >
       <!-- Close Button -->
@@ -77,12 +77,28 @@
         class="flex flex-col justify-center items-center gap-8"
         (click)="$event.stopPropagation()"
       >
-        <a class="text-white text-2xl hover:underline" (click)="scrollTo('app-about-me')"
+        <a
+          class="text-white text-2xl hover:underline"
+          (click)="scrollTo('about-me')"
+          class="nav-link"
+          [class.active]="activeSection === 'about-me'"
           >About me</a
         >
-        <a href="/" class="text-white text-2xl hover:underline" (click)="closeMenu()">Skills</a>
-        <a href="/" class="text-white text-2xl hover:underline" (click)="closeMenu()">Portfolio</a>
-        <a href="/" class="text-white text-2xl hover:underline" (click)="closeMenu()">Contact</a>
+        <a href="/" class="text-white text-2xl hover:underline" (click)="scrollTo('skills')"
+          class="nav-link"
+          [class.active]="activeSection === 'skills'"
+          >Skills</a
+        >
+        <a href="/" class="text-white text-2xl hover:underline" (click)="scrollTo('portfolio')"
+          class="nav-link"
+          [class.active]="activeSection === 'portfolio'"
+          >Portfolio</a
+        >
+        <a href="/" class="text-white text-2xl hover:underline" (click)="scrollTo('contact')"
+          class="nav-link"
+          [class.active]="activeSection === 'contact'"
+          >Contact</a
+        >
         <div class="flex gap-4 mt-4">
           <button
             class="hover:text-[#9747FF] text-lg text-white transition-colors"
