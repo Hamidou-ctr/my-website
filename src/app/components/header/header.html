@@ -9,9 +9,32 @@
     <!-- Desktop Menu -->
     <div class="hidden sm:flex space-x-16 justify-center items-center">
       <div class="flex gap-4">
-        <a href="#app-about-me" class="text-2xl font-medium">About me</a>
-        <a href="/" class="text-2xl font-medium">Skills</a>
-        <a href="/" class="text-2xl font-medium">Portfolio</a>
+        <a
+          (click)="scrollTo('about-me')"
+          class="nav-link"
+          [class.active]="activeSection === 'about-me'"
+        >
+          About me
+          <span></span>
+        </a>
+
+        <a
+          (click)="scrollTo('skills')"
+          class="nav-link"
+          [class.active]="activeSection === 'skills'"
+        >
+          Skills
+          <span></span>
+        </a>
+
+        <a
+          (click)="scrollTo('portfolio')"
+          class="nav-link"
+          [class.active]="activeSection === 'portfolio'"
+        >
+          Portfolio
+          <span></span>
+        </a>
       </div>
       <div class="flex gap-2">
         <button

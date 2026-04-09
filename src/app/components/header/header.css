@@ -1,9 +1,37 @@
-/* Optional: Smooth transitions */
-.transition-all {
-  transition: all 0.3s ease-in-out;
+.nav-link {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
 }
 
-/* Verhindert Scrollen wenn Menu offen ist */
-body.menu-open {
-  overflow: hidden;
+.nav-link:hover {
+  color: #70e61c;
+}
+
+/* Linie */
+.nav-link span {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 3px;
+  background-color: #70e61c;
+  transition: width 0.3s ease;
+}
+
+/* Hover Effekt */
+/* .nav-link:hover span {
+  width: 100%;
+} */
+
+/* ACTIVE Zustand 🔥 */
+.nav-link.active span {
+  width: 100%;
+}
+
+/* Optional: aktive Textfarbe */
+.nav-link.active {
+  color: #70e61c;
 }
