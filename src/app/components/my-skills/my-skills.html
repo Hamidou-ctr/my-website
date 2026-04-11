@@ -1,8 +1,8 @@
 <section id="skills" class="flex justify-center mt-10">
   <p class="hidden 2xl:flex flex-1"></p>
-  <div class="flex text-white w-full justify-between 2xl:w-360">
-    <div class="flex justify-center flex-wrap gap-24">
-      <div class="flex flex-col items-center gap-4">
+  <div class="flex flex-col-reverse gap-10 sm:gap-20 md:gap-[10%] text-white w-full justify-between md:flex-row 2xl:w-360">
+    <div class="flex justify-center flex-wrap gap-10 tb:gap-20 p-9 md:p-0 md:pl-16 2xl:pl-10 2xl:max-w-170">
+      <div class="flex-1 flex-col items-center gap-4">
         <img src="img/html_icons.png" class="w-14" alt="" />
         <h2>HTML</h2>
       </div>
@@ -49,26 +49,30 @@
     </div>
     <div class="flex 2xl:w-180">
       <div class="flex justify-end w-full">
-        <div class="flex flex-col text-right gap-4">
-          <h1 class="text-7xl">My Skills</h1>
+        <div class="flex flex-col text-right gap-4 text-xl">
+          <h1 class="text-6xl xxs:text-7xl text-nowrap">My Skills</h1>
           <div class="flex flex-col gap-4 justify-end">
-            <p>Show that you have used a variety of front-end technologies in your projects.</p>
+            <p class="pl-14 md:pl-0">Show that you have used a variety of front-end technologies in your projects.</p>
 
-            <h2 class="text-3xl font-bold text-nowrap flex">
+            <h2 class="hidden text-xl md:text-3xl font-bold md:flex justify-end text-nowrap">
               Looking for
-              <h2 class="text-nowrap">another skill</h2>
+              <h2 class="text-nowrap text-[#9747FF] ml-1">another skill</h2>
               ?
             </h2>
           </div>
-          <p>Reveal enthusiasm for learning new technologies and frameworks.</p>
+          <p class="hidden md:flex justify-end">
+            Reveal enthusiasm for learning new technologies and frameworks.
+          </p>
 
-          <button class="bg-[#70E61C] text-2xl font-normal py-4 px-8 rounded max-w-16 right-1">
+          <button
+            class="hidden md:flex justify-center items-center max-w-50 bg-[#70E61C] text-nowrap text-2xl font-normal py-4 px-8 rounded-xl ml-auto 2xl:ml-[70%]"
+          >
             Get in touch
           </button>
         </div>
-        <p class="flex-1 bg-fuchsia-600 h-1 min-w-[20%] mt-9 2xl:hidden"></p>
+        <p class="flex-1 bg-[#9747FF] h-1 min-w-[20%] mt-9 2xl:hidden"></p>
       </div>
     </div>
   </div>
-  <p class="hidden 2xl:flex flex-1 bg-fuchsia-600 h-1 min-w-6 mt-9"></p>
+  <p class="hidden 2xl:flex flex-1 bg-[#9747FF] h-1 min-w-6 mt-9"></p>
 </section>
