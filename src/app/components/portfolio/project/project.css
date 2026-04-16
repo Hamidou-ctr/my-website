@@ -1,0 +1,31 @@
+/* Mobile First: Bild zuerst, dann Text */
+.project-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktop: Ab 768px nebeneinander */
+@media (min-width: 768px) {
+  .project-item {
+    flex-direction: row;
+  }
+
+  /* Standard: Bild links, Text rechts */
+  .project-image {
+    order: 1;
+  }
+
+  .project-content {
+    order: 2;
+  }
+
+  /* Wenn Bild rechts sein soll */
+  .project-item.image-right .project-image {
+    order: 2;
+    justify-content: flex-end;
+  }
+
+  .project-item.image-right .project-content {
+    order: 1;
+  }
+}
