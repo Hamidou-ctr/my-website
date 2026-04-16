@@ -1,1 +1,31 @@
-<p>project works!</p>
+@for (project of projects; track project.name; let idx = $index) {
+  <section class="project-item w-full flex flex-col md:flex-row justify-between items-center gap-9 mt-10 "
+           [class.image-right]="idx % 2 === 1">
+    
+    <img
+      [src]="project.imageUrl"
+      [alt]="project.name"
+      class="project-image w-full h-84.75 max-w-150 object-cover "
+    />
+
+    <div class="project-content max-w-128.25 gap-4 p-8 flex flex-col">
+      <h1 class="text-4xl font-bold text-[#9747FF]">{{ project.name }}</h1>
+      <p class="text-2xl font-normal text-[#70E61C]">{{ project.language }}</p>
+      <p class="text-lg font-normal">{{ project.description }}</p>
+      <div class="flex items-center xs:gap-24 text-2xl font-normal">
+        <a [href]="project.liveTestUrl" target="_blank">
+          <button class="bg-[#9747FF] hover:bg-[#70E61C] text-white px-8 py-4 rounded-xl">
+            Live Test
+          </button>
+        </a>
+        <a [href]="project.githubUrl" target="_blank">
+          <button class="hover:bg-[#70E61C] border-[#70E61C] border text-white px-8 py-4 rounded-xl">
+            GitHub
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+} @empty {
+  <h1>Keine Projekte verfügbar</h1>
+}
