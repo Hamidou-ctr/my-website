@@ -1,25 +1,34 @@
 @for (project of projects; track project.name; let idx = $index) {
-  <section class="project-item w-full flex flex-col md:flex-row justify-between items-center gap-9 lx:gap-[6%] mt-10 "
-           [class.image-right]="idx % 2 === 1">
-    
+  <section
+    class="project-item w-full flex flex-col md:flex-row justify-between items-center gap-9 lt:gap-[20%] lx:gap-[26%] xl:gap-[30%] 2xl:gap-[36%] mt-10"
+    [class.image-right]="idx % 2 === 1"
+  >
     <img
       [src]="project.imageUrl"
       [alt]="project.name"
-      class="project-image w-full max-h-84.75 max-w-150 object-cover xsm:w-140 md:w-150"
+      class="project-image w-full max-w-150 object-cover xsm:w-140 md:w-[48%]"
     />
 
-    <div class="project-content gap-4 p-8 flex flex-col justify-center items-center w-full">
+    <div
+      class="project-content max-w-lg md:w-[48%] gap-4 p-8 lt:p-0 flex flex-col justify-center items-center md:items-start"
+    >
       <h1 class="text-4xl font-bold text-[#9747FF]">{{ project.name }}</h1>
       <p class="text-2xl font-normal text-[#70E61C]">{{ project.language }}</p>
       <p class="text-lg font-normal">{{ project.description }}</p>
-      <div class="flex items-center gap-[10%] xxs:gap-[30%] xs:gap-24 md:gap-8 lm:gap-24 text-2xl font-normal md:justify-start">
+      <div
+        class="flex items-center gap-[10%] xxs:gap-[30%] xs:gap-24 md:gap-8 lm:gap-20 lt:gap-24 text-2xl font-normal md:justify-start"
+      >
         <a [href]="project.liveTestUrl" target="_blank">
-          <button class="bg-[#9747FF] hover:bg-[#70E61C] text-white px-4 py-2 xs:px-8 xs:py-4 rounded-xl">
+          <button
+            class="bg-[#9747FF] hover:bg-[#70E61C] text-nowrap text-white px-4 py-2 xs:px-8 xs:py-4 rounded-xl"
+          >
             Live Test
           </button>
         </a>
         <a [href]="project.githubUrl" target="_blank">
-          <button class="hover:bg-[#70E61C] border-[#70E61C] border text-white px-4 py-2 xs:px-8 xs:py-4 rounded-xl">
+          <button
+            class="hover:bg-[#70E61C] border-[#70E61C] border text-white px-4 py-2 xs:px-8 xs:py-4 rounded-xl"
+          >
             GitHub
           </button>
         </a>
