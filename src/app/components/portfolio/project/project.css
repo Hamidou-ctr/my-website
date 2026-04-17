@@ -17,15 +17,20 @@
 
   .project-content {
     order: 2;
+    /* Text standardmäßig linksbündig */
+    text-align: left;
+    align-items: flex-start;
   }
 
   /* Wenn Bild rechts sein soll */
   .project-item.image-right .project-image {
     order: 2;
-    justify-content: flex-end;
   }
 
   .project-item.image-right .project-content {
     order: 1;
+    /* Text rechtsbündig für das Projekt mit Bild rechts */
+    text-align: right;
+    align-items: flex-end;
   }
 }
