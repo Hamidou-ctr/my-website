@@ -11,12 +11,14 @@
 
     <div
       class="project-content max-w-lg md:w-[48%] gap-4 p-8 lt:p-0 flex flex-col justify-center items-center md:items-start"
+      [class.text-right]="idx % 2 === 1"
     >
       <h1 class="text-4xl font-bold text-[#9747FF]">{{ project.name }}</h1>
       <p class="text-2xl font-normal text-[#70E61C]">{{ project.language }}</p>
       <p class="text-lg font-normal">{{ project.description }}</p>
       <div
         class="flex items-center gap-[10%] xxs:gap-[30%] xs:gap-24 md:gap-8 lm:gap-20 lt:gap-24 text-2xl font-normal md:justify-start"
+        [class.justify-end]="idx % 2 === 1"
       >
         <a [href]="project.liveTestUrl" target="_blank">
           <button
