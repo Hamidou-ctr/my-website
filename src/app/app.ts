@@ -5,11 +5,13 @@ import { Home } from './components/home/home';
 import { AboutMe } from './components/about-me/about-me';
 import { MySkills } from './components/my-skills/my-skills';
 import { Portfolio } from './components/portfolio/portfolio';
+import { Contact } from './components/contact/contact';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Header, Home, AboutMe, MySkills, Portfolio],
+  imports: [RouterOutlet, Header, Home, AboutMe, MySkills, Portfolio, Contact],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
