@@ -36,14 +36,5 @@ export class Project {
       liveTestUrl: 'https://project3-live-test.com',
       githubUrl: 'https://github.com/username/project3',
     },
-
-    {
-      name: 'Project 4',
-      language: 'Angular, TypeScript, HTML, CSS',
-      description: '    Description for Project 4 goes here.        ',
-      imageUrl: 'img/project4.png',
-      liveTestUrl: 'https://project4-live-test.com',
-      githubUrl: 'https://github.com/username/project4',
-    },
   ];
 }
