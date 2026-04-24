@@ -1,4 +1,7 @@
-<section id="Contact " class="text-white flex justify-center items-center flex-col w-full mt-9">
+<section
+  id="Contact"
+  class="text-white flex justify-center items-center flex-col w-full mt-9 border-b-2 border-[#70E61C]"
+>
   <div class="w-full flex items-center justify-center gap-4 py-16">
     <p class="bg-[#9747FF] h-1 flex-1"></p>
     <h1 class="text-5xl xs:text-8xl font-bold">Contact</h1>
@@ -6,7 +9,7 @@
   </div>
 
   <section
-    class="max-w-350 flex justify-center items-center flex-col md:items-start lm:flex-row px-6 gap-16 "
+    class="max-w-350 flex justify-center items-center flex-col md:items-start lm:flex-row px-6 gap-16"
   >
     <div
       class="w-full lm:w-1/2 flex justify-center flex-col gap-4 pl-[0%] text-base xxs:text-xl xs:text-lg font-normal"
@@ -20,27 +23,147 @@
       </p>
       <p>Need a Frontend developer? <b>Contact me!</b></p>
     </div>
-    <form action="" class="w-full lm:w-1/2 flex flex-col gap-4">
-      <input
-        type="text"
-        placeholder="Name"
-        class="w-full bg-transparent border-2 border-gray-500 rounded-md p-2 focus:outline-none focus:border-[#9747FF]"
-      />
-      <input
-        type="email"
-        placeholder="Email"
-        class="w-full bg-transparent border-2 border-gray-500 rounded-md p-2 focus:outline-none focus:border-[#9747FF]"
-      />
-      <textarea
-        placeholder="Message"
-        class="w-full bg-transparent border-2 border-gray-500 rounded-md p-2 focus:outline-none focus:border-[#9747FF]"
-      ></textarea>
+
+    <form
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
+      class="w-full lm:w-1/2 flex flex-col gap-4"
+    >
+      <!-- Name Field -->
+      <div>
+        <div
+          class="w-full flex items-center rounded-md border-2 hover:border-[#70E61C] border-[#9747FF] p-2 focus:border-[#9747FF]"
+          [class.border-red-500]="name?.invalid && name?.touched"
+          [class.border-green-500]="name?.valid && name?.touched"
+        >
+          <input
+            formControlName="name"
+            type="text"
+            placeholder="Your name"
+            class="w-full focus:outline-none bg-transparent"
+          />
+          <div class="flex gap-1">
+            <img *ngIf="name?.valid && name?.touched" src="img/done_contact_my.png" alt="valid" />
+            <img
+              *ngIf="name?.invalid && name?.touched"
+              src="img/error_contact_my.png"
+              alt="error"
+            />
+          </div>
+        </div>
+        <p *ngIf="name?.invalid && name?.touched" class="text-red-700 text-sm mt-1">
+          Your name is required
+        </p>
+      </div>
+
+      <!-- Email Field -->
+      <div>
+        <div
+          class="w-full flex items-center rounded-md border-2 hover:border-[#70E61C] border-[#9747FF] p-2"
+          [class.border-red-500]="email?.invalid && email?.touched"
+          [class.border-green-500]="email?.valid && email?.touched"
+        >
+          <input
+            formControlName="email"
+            type="email"
+            placeholder="Email"
+            class="w-full focus:outline-none bg-transparent"
+          />
+          <div class="flex gap-1">
+            <img *ngIf="email?.valid && email?.touched" src="img/done_contact_my.png" alt="valid" />
+            <img
+              *ngIf="email?.invalid && email?.touched"
+              src="img/error_contact_my.png"
+              alt="error"
+            />
+          </div>
+        </div>
+        <p *ngIf="email?.invalid && email?.touched" class="text-red-700 text-sm mt-1">
+          <span *ngIf="email?.errors?.['required']">Your email is required</span>
+          <span *ngIf="email?.errors?.['email']">Please enter a valid email</span>
+        </p>
+      </div>
+
+      <!-- Message Field -->
+      <div>
+        <div
+          class="w-full flex items-center rounded-md border-2 hover:border-[#70E61C] border-[#9747FF] p-2"
+          [class.border-red-500]="message?.invalid && message?.touched"
+          [class.border-green-500]="message?.valid && message?.touched"
+        >
+          <textarea
+            formControlName="message"
+            placeholder="Message"
+            rows="4"
+            class="w-full focus:outline-none bg-transparent resize-none"
+          ></textarea>
+          <div class="flex gap-1 self-start mt-1">
+            <img
+              *ngIf="message?.valid && message?.touched"
+              src="img/done_contact_my.png"
+              alt="valid"
+            />
+            <img
+              *ngIf="message?.invalid && message?.touched"
+              src="img/error_contact_my.png"
+              alt="error"
+            />
+          </div>
+        </div>
+        <p *ngIf="message?.invalid && message?.touched" class="text-red-700 text-sm mt-1">
+          Your message is required
+        </p>
+      </div>
+
+      <!-- Privacy Checkbox mit Bildern (kein input checkbox mehr) -->
+      <div>
+        <div class="flex items-start gap-3">
+          <!-- Klickbares Bild statt Checkbox -->
+          <div
+            (click)="togglePrivacy()"
+            class="cursor-pointer hover:opacity-80 transition-opacity mt-1"
+          >
+            <img *ngIf="privacyAccepted?.value" src="img/checked.png" alt="checked" class="w-8" />
+            <img
+              *ngIf="!privacyAccepted?.value"
+              src="img/unchecked.png"
+              alt="unchecked"
+              class="w-8"
+            />
+          </div>
+
+          <label class="text-sm cursor-pointer" (click)="togglePrivacy()">
+            Ich habe gelesen die
+            <a class="text-[#9747FF] hover:underline" href="#" (click)="$event.stopPropagation()"
+              >Datenschutzbestimmungen</a
+            >
+            und stimme der beschriebenen Verarbeitung meiner Daten zu.
+          </label>
+        </div>
+        <p
+          *ngIf="privacyAccepted?.invalid && privacyAccepted?.touched"
+          class="text-red-700 text-sm mt-1"
+        >
+          Bitte akzeptieren Sie die Datenschutzerklärung.
+        </p>
+      </div>
+
+      <!-- Submit Button -->
       <button
         type="submit"
-        class="bg-[#9747FF] text-white px-6 py-2 rounded-md hover:bg-[#7a36c9] transition-colors duration-300"
+        [disabled]="contactForm.invalid || isSubmitting"
+        class="bg-[#9747FF] text-white px-6 py-2 rounded-md hover:bg-[#7a36c9] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Send Message :)
+        {{ isSubmitting ? 'Sending...' : 'Send Message :)' }}
       </button>
+
+      <!-- Success/Error Message -->
+      <div *ngIf="submitSuccess" class="text-green-500 text-center p-2 rounded bg-green-900/20">
+        Message sent successfully!
+      </div>
+      <div *ngIf="submitError" class="text-red-500 text-center p-2 rounded bg-red-900/20">
+        Failed to send message. Please try again.
+      </div>
     </form>
   </section>
 </section>
