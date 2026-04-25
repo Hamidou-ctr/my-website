@@ -1,0 +1,32 @@
+.submitSuccess,
+.submitError {
+  position: fixed;
+  top: 50%;
+  right: -300px;
+  min-width: 250px;
+  z-index: 1000;
+
+  animation: slideInOut 4s ease forwards;
+}
+
+@keyframes slideInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateX(-320px);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translate(-320px, -50%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
