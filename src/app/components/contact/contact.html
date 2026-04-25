@@ -153,10 +153,20 @@
         type="submit"
         [disabled]="contactForm.invalid || isSubmitting"
         [ngClass]="buttonClasses"
-        class="w-full max-w-63  text-white px-7 py-4 rounded-lg transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+        class="w-full max-w-63 mb-10 text-white px-7 py-4 rounded-lg transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {{ isSubmitting ? 'Sending...' : 'Send Message :)' }}
       </button>
+
+      <p class="w-full flex justify-end items-center mb-10 pl-12">
+        <a href="" class="flex items-center mr-8">
+          <img
+            src="img/scroll_down.png"
+            alt=""
+            class="w-18 rotate-180 cursor-pointer p-2 border-4 rounded-full animate-pulse"
+          />
+        </a>
+      </p>
 
       <!-- Success/Error Message -->
       <div *ngIf="submitSuccess" class="text-green-500 text-center p-2 rounded bg-green-900/20">
