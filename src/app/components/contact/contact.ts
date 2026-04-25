@@ -56,6 +56,16 @@ export class Contact {
     }
   }
 
+  // Füge diesen Getter zu deiner Contact-Klasse hinzu
+  get buttonClasses() {
+    const isDisabled = this.contactForm.invalid || this.isSubmitting;
+    return {
+      'bg-gray-400': isDisabled,
+      'bg-[#70E61C]': !isDisabled,
+      'hover:bg-[#9747FF]': !isDisabled,
+    };
+  }
+
   onSubmit() {
     if (this.contactForm.invalid) {
       // Markiere alle Felder als touched, um Fehler anzuzeigen
