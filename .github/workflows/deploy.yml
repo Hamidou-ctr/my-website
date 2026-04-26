@@ -34,7 +34,7 @@ jobs:
           echo "Moving files from browser folder to root..."
           # Move files from browser folder to a temp location
           mkdir -p deploy_temp
-          cp -r dist/portfolio/browser/* deploy_temp/
+          cp -r dist/my-website/browser/* deploy_temp/
           ls -la deploy_temp/
 
       - name: Setup SSH
