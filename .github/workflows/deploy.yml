@@ -11,95 +11,94 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4  # Aktualisiert auf v4
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4  # Aktualisiert auf v4
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20.x"
+          cache: "npm"
 
       - name: Install Dependencies
         run: npm ci
 
       - name: Build Angular App
         run: npm run build -- --configuration=production
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
 
-      - name: Prepare build files
+      - name: Verify Build Output
         run: |
+          echo "Build output structure:"
+          find dist/ -type f -name "*.html" -o -name "*.js" -o -name "*.css" | head -20
+          echo "Moving files from browser folder to root..."
+          # Move files from browser folder to a temp location
           mkdir -p deploy_temp
-          # Prüfe wo die Build-Dateien sind
-          if [ -d "dist/my-website/browser" ]; then
-            cp -r dist/my-website/browser/* deploy_temp/
-          elif [ -d "dist/my-website" ]; then
-            cp -r dist/my-website/* deploy_temp/
-          else
-            echo "Build directory not found!"
-            ls -la dist/
-            exit 1
-          fi
+          cp -r dist/my-website/browser/* deploy_temp/
           ls -la deploy_temp/
 
-      - name: Debug SSH Connection
+      - name: Setup SSH
         run: |
-          echo "Testing SSH connection..."
-          # Temporäre SSH-Konfiguration
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > /tmp/deploy_key
-          chmod 600 /tmp/deploy_key
-          
-          # Teste die Verbindung mit mehr Details
-          ssh -v -i /tmp/deploy_key \
-            -o StrictHostKeyChecking=no \
-            -o ConnectTimeout=10 \
-            ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} "echo 'SSH connection successful!'" || {
-            echo "SSH connection failed!"
-            echo "Please check:"
-            echo "1. SSH_PRIVATE_KEY secret is correct"
-            echo "2. DEPLOY_USER is correct"
-            echo "3. DEPLOY_HOST is correct"
-            echo "4. Server allows key authentication"
-            exit 1
-          }
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+          # SSH known hosts
+          ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy to Server
         run: |
-          # Setup SSH
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > /tmp/deploy_key
-          chmod 600 /tmp/deploy_key
-          
-          # Erstelle Backup und deploye
-          ssh -i /tmp/deploy_key \
-            -o StrictHostKeyChecking=no \
-            ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
-            
-            # Erstelle Backup-Verzeichnis falls nötig
-            mkdir -p ${{ secrets.DEPLOY_PATH }}/../backups
-            
-            # Backup des aktuellen Deployments
-            TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+          # Create a timestamp for backup
+          TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+
+          # SSH into server and deploy
+          ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
             cd ${{ secrets.DEPLOY_PATH }}
-            tar -czf ../backups/backup_${TIMESTAMP}.tar.gz . 2>/dev/null || true
             
-            # Lösche alte Dateien (aber schütze .well-known und configs)
-            find . -maxdepth 1 ! -name '.well-known' ! -name '*.php' ! -name '.htaccess' ! -name '.' ! -name '..' -exec rm -rf {} + 2>/dev/null || true
+            # Create backup of current version
+            echo "Creating backup..."
+            tar -czf ../../backups/backup_${TIMESTAMP}.tar.gz .
+            
+            # Clean up directory but keep PHP files and specific folders
+            echo "Cleaning old files..."
+            # Remove everything except specific files/folders
+            find . -maxdepth 1 ! -name '.well-known' ! -name '*.php' ! -name 'media' ! -name 'project' ! -name '.' ! -name '..' ! -name 'index.html' -exec rm -rf {} + 2>/dev/null || true
+            
+            # Remove the browser folder if it exists
+            rm -rf browser 2>/dev/null || true
           EOF
-          
-          # Kopiere neue Dateien
-          scp -i /tmp/deploy_key \
-            -o StrictHostKeyChecking=no \
-            -r deploy_temp/* \
-            ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/
-          
-          # Setze Berechtigungen
-          ssh -i /tmp/deploy_key \
-            -o StrictHostKeyChecking=no \
-            ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} \
-            "chmod -R 755 ${{ secrets.DEPLOY_PATH }} && ls -la ${{ secrets.DEPLOY_PATH }}"
+
+          # Copy new build files to server
+          echo "Copying new files..."
+          scp -r -o StrictHostKeyChecking=no deploy_temp/* ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/
+
+          # Copy assets folder if it exists
+          if [ -d "deploy_temp/assets" ]; then
+            echo "Copying assets..."
+            scp -r -o StrictHostKeyChecking=no deploy_temp/assets ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/
+          fi
+
+          # Set proper permissions on server
+          ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
+            cd ${{ secrets.DEPLOY_PATH }}
+            
+            echo "Setting permissions..."
+            chmod 644 *.html *.js *.css *.txt 2>/dev/null || true
+            chmod -R 644 assets/* 2>/dev/null || true
+            
+            # List files to verify deployment
+            echo "Deployment completed successfully!"
+            echo "Files in deployment directory:"
+            ls -la
+            echo "Index.html content (first few lines):"
+            head -5 index.html || echo "No index.html found"
+          EOF
+
+          # Clean local temp dir
+          rm -rf deploy_temp
 
       - name: Cleanup
         if: always()
         run: |
-          rm -f /tmp/deploy_key
-          rm -rf deploy_temp
-
-          
+          rm -f ~/.ssh/id_rsa
+          echo "Cleanup completed"
