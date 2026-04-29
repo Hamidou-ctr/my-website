@@ -36,7 +36,7 @@
   .homeBackgroundImage {
     background-size: 100vw 50vh;
     background-attachment: scroll;
-    background-position-y: bottom;
+    background-position-y: 58vh;
   }
 
   .personal-image {
@@ -51,7 +51,7 @@
     background-image: url('../../../../public/img/hero_background1.png');
     background-size: 100vw 40vh;
     background-attachment: scroll;
-    background-position-y: bottom;
+    background-position-y: 60vh;
   }
   .personal-image {
     background-size: 50vw;
@@ -65,7 +65,7 @@
     background-image: url('../../../../public/img/hero_background1.png');
     background-size: 100vw 43vh;
     background-attachment: scroll;
-    background-position-y: bottom;
+    background-position-y: 60vh;
   }
 
   .personal-image {
@@ -80,7 +80,7 @@
     background-image: url('../../../../public/img/hero_background1.png');
     background-size: 100vw 45vh;
     background-attachment: scroll;
-    background-position-y: bottom;
+    background-position-y: 60vh;
   }
 
   .personal-image {
@@ -95,7 +95,7 @@
     background-image: url('../../../../public/img/hero_background1.png');
     background-size: 100vw 44vh;
     background-attachment: scroll;
-    background-position-y: bottom;
+    background-position-y: 60vh;
   }
 
   .personal-image {
