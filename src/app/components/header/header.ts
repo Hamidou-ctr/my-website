@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ScrollService } from '../../service/scroll-service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -8,17 +10,24 @@ import { CommonModule } from '@angular/common';
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
-export class Header {
+export class Header implements OnInit, OnDestroy {
   isMenuOpen = false;
   activeSection = '';
 
-  hasUserScrolled = false;
+  private subscription!: Subscription;
+
+  constructor(private scrollService: ScrollService) {}
 
   ngOnInit() {
-    window.addEventListener('scroll', () => {
-      this.hasUserScrolled = true;
-      this.checkActiveSection();
-    });
+    this.subscription = this.scrollService.activeSection$.subscribe(
+      (section) => (this.activeSection = section),
+    );
+  }
+
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
   toggleMenu() {
@@ -30,26 +39,7 @@ export class Header {
   }
 
   scrollTo(section: string) {
+    this.scrollService.scrollTo(section);
     this.closeMenu();
-    this.activeSection = section; // 🔥 sofort aktiv
-    document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  checkActiveSection() {
-    if (!this.hasUserScrolled) return;
-
-    const sections = ['about-me', 'skills', 'portfolio', 'contact'];
-
-    for (let section of sections) {
-      const el = document.getElementById(section);
-      if (!el) continue;
-
-      const rect = el.getBoundingClientRect();
-
-      if (rect.top <= 150 && rect.bottom >= 150) {
-        this.activeSection = section;
-        break;
-      }
-    }
   }
 }

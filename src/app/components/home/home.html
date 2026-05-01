@@ -1,5 +1,5 @@
 <div
-id="app-home"
+  id="app-home"
   class="homeBackgroundImage w-screen h-[calc(100vh-85px)] flex flex-col justify-center items-center"
 >
   <section
@@ -31,13 +31,13 @@ id="app-home"
           </p>
         </div>
       </div>
-      <a href="mailto:hamiduguinea@gmail.com">
-        <button
-          class="bg-[#70E61C] hover:bg-[#9747FF] text-white text-2xl mt-4 px-7 py-4 rounded-xl"
-        >
-          Let’s talk!
-        </button>
-      </a>
+
+      <button
+        class="bg-[#70E61C] hover:bg-[#9747FF] text-white text-2xl mt-4 px-7 py-4 rounded-xl"
+        (click)="scrollTo('contact')"
+      >
+        Let’s talk!
+      </button>
     </main>
   </section>
 
@@ -59,7 +59,7 @@ id="app-home"
         >
       </div>
       <p class="rotate-90 hidden sm:inline text-2xl font-normal mb-16">
-        <a href="">Scroll down &rarr;</a>
+        <a (click)="scrollTo('contact')">Scroll down &rarr;</a>
       </p>
     </div>
     <p class="hidden 2xl:block 2xl:flex-1"></p>

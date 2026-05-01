@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { ScrollService } from '../../service/scroll-service';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,8 @@ import { Component, AfterViewInit, HostListener, ViewChild, ElementRef } from '@
 })
 export class Home implements AfterViewInit {
   @ViewChild('profileSection') profileSection!: ElementRef;
+
+  constructor(private scrollService: ScrollService) {}
 
   ngAfterViewInit() {
     this.checkOrientation();
@@ -30,5 +33,9 @@ export class Home implements AfterViewInit {
     if (!isMobile && !isPortrait) {
       section.style.justifyContent = 'space-between';
     }
+  }
+
+  scrollTo(section: string) {
+    this.scrollService.scrollTo(section);
   }
 }
