@@ -22,7 +22,7 @@ export class ScrollService {
   checkActiveSection() {
     if (!this.hasUserScrolled) return;
 
-    const sections = ['about-me', 'skills', 'portfolio', 'contact'];
+    const sections = ['home', 'about-me', 'skills', 'portfolio', 'contact'];
 
     for (let section of sections) {
       const el = document.getElementById(section);

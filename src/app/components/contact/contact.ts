@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { ScrollService } from '../../service/scroll-service';
 
 @Component({
   selector: 'app-contact',
@@ -21,6 +22,7 @@ export class Contact {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
+    private scrollService: ScrollService,
   ) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
@@ -120,5 +122,9 @@ export class Contact {
           this.isSubmitting = false;
         },
       });
+  }
+
+  scrollTo(section: string) {
+    this.scrollService.scrollTo(section);
   }
 }
