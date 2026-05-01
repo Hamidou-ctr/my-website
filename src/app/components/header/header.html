@@ -1,7 +1,5 @@
 <div class="w-screen flex justify-center fixed top-0 left-0 z-50 bg-[#141d2f]">
-  <nav
-    class="w-screen max-w-360 flex justify-between items-center gap-8 p-4 text-white relative"
-  >
+  <nav class="w-screen max-w-360 flex justify-between items-center gap-8 p-4 text-white relative">
     <a href="#app-home" (click)="scrollTo('app-home')">
       <h1 class="text-3xl font-bold">Hamidou</h1>
     </a>
@@ -84,17 +82,23 @@
           [class.active]="activeSection === 'about-me'"
           >About me</a
         >
-        <a href="/" class="text-white text-2xl hover:underline" (click)="scrollTo('skills')"
+        <a
+          class="text-white text-2xl hover:underline"
+          (click)="scrollTo('skills')"
           class="nav-link"
           [class.active]="activeSection === 'skills'"
           >Skills</a
         >
-        <a href="/" class="text-white text-2xl hover:underline" (click)="scrollTo('portfolio')"
+        <a
+          class="text-white text-2xl hover:underline"
+          (click)="scrollTo('portfolio')"
           class="nav-link"
           [class.active]="activeSection === 'portfolio'"
           >Portfolio</a
         >
-        <a href="/" class="text-white text-2xl hover:underline" (click)="scrollTo('contact')"
+        <a
+          class="text-white text-2xl hover:underline"
+          (click)="scrollTo('contact')"
           class="nav-link"
           [class.active]="activeSection === 'contact'"
           >Contact</a
