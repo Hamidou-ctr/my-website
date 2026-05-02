@@ -33,7 +33,8 @@
 
       <button
         class="bg-[#70E61C] hover:bg-[#9747FF] text-white text-2xl mt-4 px-7 py-4 rounded-xl"
-        (click)="scrollTo('contact')"
+        routerLink="/"
+        fragment="contact"
       >
         Let’s talk!
       </button>
@@ -48,17 +49,17 @@
           <img src="img/github_button.png" class="w-8" alt="" />
         </a>
         <p class="hidden sm:inline">
-          <a (click)="scrollTo('contact')" >
+          <a routerLink="/" fragment="contact">
             <img src="img/email_button.png" class="w-8" alt="" />
           </a>
         </p>
 
-        <a class="text-[4vw] xs:text-2xl font-normal" (click)="scrollTo('contact')"
+        <a class="text-[4vw] xs:text-2xl font-normal" routerLink="/" fragment="contact"
           >hamiduguinea@gmail.com</a
         >
       </div>
       <p class="rotate-90 hidden sm:inline text-2xl font-normal mb-16">
-        <a (click)="scrollTo('contact')">Scroll down &rarr;</a>
+        <a routerLink="/" fragment="contact">Scroll down &rarr;</a>
       </p>
     </div>
     <p class="hidden 2xl:block 2xl:flex-1"></p>
