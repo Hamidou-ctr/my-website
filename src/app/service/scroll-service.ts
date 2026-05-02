@@ -11,7 +11,7 @@ export class ScrollService {
   hasUserScrolled = false;
 
   scrollTo(section: string) {
-    this.setActiveSection(section); // 🔥 sofort aktiv
+    this.setActiveSection(section);
     document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
   }
 
