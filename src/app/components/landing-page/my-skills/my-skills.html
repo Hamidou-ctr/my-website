@@ -73,8 +73,9 @@
 
           <button
             class="hidden md:flex justify-center items-center max-w-50 bg-[#70E61C] text-nowrap text-2xl font-normal py-4 px-8 rounded-xl ml-auto 2xl:ml-[70%]"
-          
-            (click)="scrollTo('contact')">
+            routerLink="/"
+            fragment="contact"
+          >
             Get in touch
           </button>
         </div>
@@ -97,7 +98,8 @@
 
   <button
     class="flex justify-center items-center max-w-50 bg-[#70E61C] text-nowrap text-2xl font-normal py-4 px-8 rounded-xl"
-    (click)="scrollTo('contact')"
+    routerLink="/"
+    fragment="contact"
   >
     Get in touch
   </button>
