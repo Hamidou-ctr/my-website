@@ -1,6 +1,6 @@
 @media screen and (min-width: 800px) {
   section {
-    background-image: url('../../../../public/img/purple_shadow_about_me.png');
+    background-image: url('../../../../../public/img/purple_shadow_about_me.png');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: clamp(50vw, 35vh, 100px) auto;

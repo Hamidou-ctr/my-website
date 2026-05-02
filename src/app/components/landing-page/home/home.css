@@ -1,5 +1,5 @@
 .homeBackgroundImage {
-  background-image: url('../../../../public/img/hero_background2.png');
+  background-image: url('../../../../../public/img/hero_background2.png');
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -7,7 +7,7 @@
 }
 
 .personal-image {
-  background-image: url('../../../../public/img/photo_shadows.png');
+  background-image: url('../../../../../public/img/photo_shadows.png');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -48,7 +48,7 @@
 
 @media screen and (min-width: 800px) and (max-width: 859px) {
   .homeBackgroundImage {
-    background-image: url('../../../../public/img/hero_background1.png');
+    background-image: url('../../../../../public/img/hero_background1.png');
     background-size: 100vw 40vh;
     background-attachment: scroll;
     background-position-y: 60vh;
@@ -62,7 +62,7 @@
 
 @media screen and (min-width: 860px) and (max-width: 967px) {
   .homeBackgroundImage {
-    background-image: url('../../../../public/img/hero_background1.png');
+    background-image: url('../../../../../public/img/hero_background1.png');
     background-size: 100vw 43vh;
     background-attachment: scroll;
     background-position-y: 60vh;
@@ -77,7 +77,7 @@
 
 @media screen and (min-width: 968px) and (max-width: 991px) {
   .homeBackgroundImage {
-    background-image: url('../../../../public/img/hero_background1.png');
+    background-image: url('../../../../../public/img/hero_background1.png');
     background-size: 100vw 45vh;
     background-attachment: scroll;
     background-position-y: 60vh;
@@ -92,7 +92,7 @@
 
 @media screen and (min-width: 992px) {
   .homeBackgroundImage {
-    background-image: url('../../../../public/img/hero_background1.png');
+    background-image: url('../../../../../public/img/hero_background1.png');
     background-size: 100vw 44vh;
     background-attachment: scroll;
     background-position-y: 60vh;
