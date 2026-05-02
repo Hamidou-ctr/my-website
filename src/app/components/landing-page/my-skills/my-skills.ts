@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ScrollService } from '../../service/scroll-service';
+import { ScrollService } from '../../../service/scroll-service';
 
 @Component({
   selector: 'app-my-skills',

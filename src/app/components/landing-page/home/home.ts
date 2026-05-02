@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, HostListener, ViewChild, ElementRef } from '@angular/core';
-import { ScrollService } from '../../service/scroll-service';
+import { ScrollService } from '../../../service/scroll-service';
 
 @Component({
   selector: 'app-home',
