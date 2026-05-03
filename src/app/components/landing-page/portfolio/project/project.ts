@@ -20,7 +20,7 @@ export class Project {
     },
 
     {
-      name: 'Project 2',
+      name: 'EL Pollo Loco',
       language: 'Angular, TypeScript, HTML, CSS',
       description: '    Another project description goes here.        ',
       imageUrl: 'img/pollo_loco.png',
