@@ -1,12 +1,12 @@
 @for (project of projects; track project.name; let idx = $index) {
   <section
-    class="project-item w-full flex flex-col md:flex-row justify-between items-center gap-9 lt:gap-[20%] lx:gap-[26%] xl:gap-[30%] 2xl:gap-[36%] mt-10"
+    class="project-item w-full flex flex-col md:flex-row justify-between gap-[5%] items-center lx:gap-[15%] xl:gap-[25%] mt-10"
     [class.image-right]="idx % 2 === 1"
   >
     <img
       [src]="project.imageUrl"
       [alt]="project.name"
-      class="project-image w-full max-w-150 object-cover xsm:w-140 md:w-[48%]"
+      class="project-image w-full max-w-150 object-cover xsm:w-140 md:w-[45%]"
     />
 
     <div
