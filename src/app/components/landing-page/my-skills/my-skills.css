@@ -1,0 +1,63 @@
+.background-skills {
+  background-image: url(../../../../../public/img/green_shadow_skills_portfolio.png);
+  background-size: 100vw 100vw;
+  background-position: left -180px bottom -80px;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 480px) {
+  .background-skills {
+    background-size: 70vw 100vw;
+    background-position: left -180px bottom -80px;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .background-skills {
+    background-size: 60vw 100vw;
+    background-position: left -30vw bottom -18vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .background-skills {
+    background-size: 80vw 60vw;
+    background-position: left -50vw bottom -10vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .background-skills {
+    background-size: 80vw 60vw;
+    background-position: left -50vw bottom -14vw;
+  }
+}
+
+
+@media only screen and (min-width: 1180px) {
+  .background-skills {
+    background-size: 50vw 50vw;
+    background-position: left -30vw bottom -10vw;
+  }
+}
+
+@media only screen and (min-width: 1270px) {
+  .background-skills {
+    background-size: 50vw 30vw;
+    background-position: left -30vw bottom -8vw;
+  }
+}
+
+@media only screen and (min-width: 1540px) {
+  .background-skills {
+    background-size: 600px 500px;
+    background-position: left -200px bottom -80px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .background-skills {
+    background-size: 600px 500px;
+    background-position: left -80px bottom -20px;
+  }
+}
