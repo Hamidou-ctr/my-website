@@ -5,7 +5,7 @@ import { TranslatePipe } from '../../../service/translate.pipe';
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [CommonModule ,TranslatePipe],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './about-me.html',
   styleUrl: './about-me.css',
 })

@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
 export class Header implements OnInit, OnDestroy {
   isMenuOpen = false;
   activeSection = '';
-  
+
   // Erstelle computed Signale für jede Übersetzung
   aboutText = computed(() => this.translationService.translate('nav.about'));
   skillsText = computed(() => this.translationService.translate('nav.skills'));
@@ -26,7 +26,7 @@ export class Header implements OnInit, OnDestroy {
 
   constructor(
     private scrollService: ScrollService,
-    public translationService: TranslationService
+    public translationService: TranslationService,
   ) {}
 
   ngOnInit() {
