@@ -29,7 +29,7 @@ export class TranslationService {
     'home.i_am': { EN: 'I am', DE: 'Ich bin' },
     'home.frontend_developer': { EN: 'FRONTEND DEVELOPER', DE: 'FRONTEND ENTWICKLER' },
     'home.lets_talk': { EN: "Let's talk!", DE: 'Lass uns reden!' },
-    'home.scroll_down': { EN: 'Scroll down', DE: 'Nach unten' },
+    'home.scroll_down': { EN: 'Scroll down', DE: 'Nach unten scrollen' },
 
     // About Me Section
     'about.title': { EN: 'About me', DE: 'Über mich' },
@@ -52,6 +52,27 @@ export class TranslationService {
 
     // Skills Section
     'skills.title': { EN: 'My Skills', DE: 'Meine Fähigkeiten' },
+    'skills.continually_learning': { EN: 'Continually Learning', DE: 'Kontinuierliches Lernen' },
+    'skills.description': {
+      EN: 'I am proficient in a variety of programming languages and frameworks, including HTML, CSS, JavaScript, React, and more. My expertise extends to responsive design, ensuring that applications look great on all devices. I am also familiar with version control systems like Git, which allows for efficient collaboration and code management.',
+      DE: 'Ich beherrsche eine Vielzahl von Programmiersprachen und Frameworks, darunter HTML, CSS, JavaScript, React und mehr. Meine Expertise erstreckt sich auf responsives Design, um sicherzustellen, dass Anwendungen auf allen Geräten gut aussehen. Ich bin auch mit Versionskontrollsystemen wie Git vertraut, was eine effiziente Zusammenarbeit und Codeverwaltung ermöglicht.',
+    },
+    'skills.looking_for': {
+      EN: 'Looking for',
+      DE: 'Auf der Suche nach',
+    },
+    'skills.another_skill': {
+      EN: 'another skill',
+      DE: 'einer weiteren Fähigkeit',
+    },
+    'skills.enthusiasm': {
+      EN: 'Reveal enthusiasm for learning new technologies and frameworks.',
+      DE: 'Zeigen Sie Begeisterung für das Erlernen neuer Technologien und Frameworks.',
+    },
+    'skills.get_in_touch': {
+      EN: 'Get in touch',
+      DE: 'Kontakt aufnehmen',
+    },
 
     // Portfolio Section
     'portfolio.title': { EN: 'My Projects', DE: 'Meine Projekte' },

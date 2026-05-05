@@ -8,68 +8,68 @@
         class="flex justify-center flex-wrap gap-10 tb:gap-20 px-20 md:p-0 md:pl-16 md:w-[50%] 2xl:pl-10 2xl:max-w-170"
       >
         <div class="flex-1 flex-col items-center gap-4">
-          <img src="img/html_icons.png" class="w-12 sm:w-16" alt="" />
+          <img src="img/html_icons.png" class="w-12 sm:w-16" alt="HTML" />
           <h2>HTML</h2>
         </div>
         <div class="flex flex-col items-center gap-4">
-          <img src="img/css_icons.png" class="w-12 sm:w-16" alt="" />
+          <img src="img/css_icons.png" class="w-12 sm:w-16" alt="CSS" />
           <h2>CSS</h2>
         </div>
         <div class="flex flex-col items-center gap-4">
-          <img src="img/javascript_icons.png" class="w-12 sm:w-16" alt="" />
+          <img src="img/javascript_icons.png" class="w-12 sm:w-16" alt="JavaScript" />
           <h2>JavaScript</h2>
         </div>
         <div class="flex flex-col items-center gap-4">
-          <img src="img/typescript_icons.png" class="w-12 sm:w-16" alt="" />
+          <img src="img/typescript_icons.png" class="w-12 sm:w-16" alt="TypeScript" />
           <h2>TypeScript</h2>
         </div>
         <div class="flex flex-col items-center gap-4">
-          <img src="img/angular_icons.png" class="w-12 sm:w-16" alt="" />
+          <img src="img/angular_icons.png" class="w-12 sm:w-16" alt="Angular" />
           <h2>Angular</h2>
         </div>
         <div class="flex flex-col items-center gap-4">
-          <img src="img/firebase_icons.png" class="w-12 sm:w-16" alt="" />
+          <img src="img/firebase_icons.png" class="w-12 sm:w-16" alt="Firebase" />
           <h2>Firebase</h2>
         </div>
         <div class="flex flex-col items-center gap-4">
-          <img src="img/git_icons.png" class="w-12 sm:w-16" alt="" />
+          <img src="img/git_icons.png" class="w-12 sm:w-16" alt="Git" />
           <h2>Git</h2>
         </div>
         <div class="flex flex-col items-center gap-4">
-          <img src="img/rest_api_icons.png" class="w-12 sm:w-16" alt="" />
+          <img src="img/rest_api_icons.png" class="w-12 sm:w-16" alt="REST API" />
           <h2>REST API</h2>
         </div>
         <div class="flex flex-col items-center gap-4">
-          <img src="img/scrum_icons.png" class="w-12 sm:w-16" alt="" />
+          <img src="img/scrum_icons.png" class="w-12 sm:w-16" alt="Scrum" />
           <h2>Scrum</h2>
         </div>
         <div class="flex flex-col items-center gap-4">
-          <img src="img/material_design_icons.png" class="w-12 sm:w-16" alt="" />
+          <img src="img/material_design_icons.png" class="w-12 sm:w-16" alt="Material Design" />
           <h2>Material Design</h2>
         </div>
         <div class="flex flex-col items-center gap-4">
-          <img src="img/continually_learning_icons.png" class="w-12 sm:w-16" alt="" />
-          <h2>Continually Learning</h2>
+          <img src="img/continually_learning_icons.png" class="w-12 sm:w-16" alt="Continually Learning" />
+          <h2>{{ 'skills.continually_learning' | translate }}</h2>
         </div>
       </div>
 
       <div class="flex 2xl:w-180">
         <div class="flex justify-end w-full">
           <div class="flex flex-col text-right gap-4 text-xl">
-            <h1 class="text-6xl xxs:text-7xl text-nowrap">My Skills</h1>
+            <h1 class="text-6xl xxs:text-7xl text-nowrap">{{ 'skills.title' | translate }}</h1>
             <div class="flex flex-col gap-4 justify-end">
               <p class="pl-14 md:pl-0">
-                Show that you have used a variety of front-end technologies in your projects.
+                {{ 'skills.description' | translate }}
               </p>
 
               <h2 class="hidden text-xl md:text-3xl font-bold md:flex justify-end text-nowrap">
-                Looking for
-                <h2 class="text-nowrap text-[#9747FF] ml-1">another skill</h2>
+                {{ 'skills.looking_for' | translate }}
+                <h2 class="text-nowrap text-[#9747FF] ml-1">{{ 'skills.another_skill' | translate }}</h2>
                 ?
               </h2>
             </div>
             <p class="hidden md:flex justify-end">
-              Reveal enthusiasm for learning new technologies and frameworks.
+              {{ 'skills.enthusiasm' | translate }}
             </p>
 
             <button
@@ -77,7 +77,7 @@
               routerLink="/"
               fragment="contact"
             >
-              Get in touch
+              {{ 'skills.get_in_touch' | translate }}
             </button>
           </div>
           <p class="flex-1 bg-[#9747FF] h-1 min-w-[20%] mt-9 2xl:hidden"></p>
@@ -89,12 +89,12 @@
 
   <div class="flex flex-col items-center gap-4 w-full md:hidden text-white mt-10">
     <h2 class="text-[5vw] xsm:text-[5vw] font-bold flex justify-center items-center text-nowrap">
-      Looking for
-      <h2 class="text-nowrap text-[#9747FF] ml-1">another skill</h2>
+      {{ 'skills.looking_for' | translate }}
+      <h2 class="text-nowrap text-[#9747FF] ml-1">{{ 'skills.another_skill' | translate }}</h2>
       ?
     </h2>
     <p class="flex justify-center items-center text-xl px-8">
-      Reveal enthusiasm for learning new technologies and frameworks.
+      {{ 'skills.enthusiasm' | translate }}
     </p>
 
     <button
@@ -102,7 +102,7 @@
       routerLink="/"
       fragment="contact"
     >
-      Get in touch
+      {{ 'skills.get_in_touch' | translate }}
     </button>
   </div>
 </div>
