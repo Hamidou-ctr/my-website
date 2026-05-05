@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, AfterViewInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslatePipe } from '../../../service/translate.pipe';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslatePipe],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

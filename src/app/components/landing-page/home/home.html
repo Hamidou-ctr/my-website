@@ -15,7 +15,7 @@
         <h3
           class="-rotate-90 text-2xl xxs:text-3xl xs:text-4xl xsm:text-5xl md:text-4xl tb:text-2xl lm:text-3xl 2xl:text-[30px] font-normal"
         >
-          I am
+          {{ 'home.i_am' | translate }}
         </h3>
         <div>
           <h1
@@ -26,7 +26,7 @@
           <p
             class="text-xl xxs:text-2xl xs:text-3xl xsm:text-4xl tb:text-[3vw] 2xl:text-[45px] text-[#9747FF] font-normal whitespace-nowrap tracking-tight"
           >
-            FRONTEND DEVELOPER
+            {{ 'home.frontend_developer' | translate }}
           </p>
         </div>
       </div>
@@ -36,7 +36,7 @@
         routerLink="/"
         fragment="contact"
       >
-        Let’s talk!
+        {{ 'home.lets_talk' | translate }}
       </button>
     </main>
   </section>
@@ -46,11 +46,11 @@
     <div class="flex-1 2xl:min-w-335 flex justify-between items-center">
       <div class="flex items-center ml-[10%] gap-[5%] sm:gap-4 sm:ml-4">
         <a href="https://github.com/Hamidou-ctr" target="_blank" rel="noopener noreferrer">
-          <img src="img/github_button.png" class="w-8" alt="" />
+          <img src="img/github_button.png" class="w-8" alt="GitHub" />
         </a>
         <p class="hidden sm:inline">
           <a routerLink="/" fragment="contact">
-            <img src="img/email_button.png" class="w-8" alt="" />
+            <img src="img/email_button.png" class="w-8" alt="Email" />
           </a>
         </p>
 
@@ -59,7 +59,7 @@
         >
       </div>
       <p class="rotate-90 hidden sm:inline text-2xl font-normal mb-16">
-        <a routerLink="/" fragment="contact">Scroll down &rarr;</a>
+        <a routerLink="/" fragment="contact">{{ 'home.scroll_down' | translate }} &rarr;</a>
       </p>
     </div>
     <p class="hidden 2xl:block 2xl:flex-1"></p>

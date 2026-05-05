@@ -1,4 +1,4 @@
-import { Injectable, signal, computed } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 export type Language = 'DE' | 'EN';
 
@@ -15,33 +15,47 @@ export class TranslationService {
   private currentLanguage = signal<Language>('DE');
   public currentLang = this.currentLanguage.asReadonly();
 
-  // Erstelle ein Signal für jede Übersetzung
   private translationMap = signal<Map<string, string>>(new Map());
-
-  // Öffentliches Signal für Übersetzungsänderungen
   public translationsVersion = signal<number>(0);
 
   private translations: Translations = {
+    // Navigation
     'nav.about': { EN: 'About me', DE: 'Über mich' },
     'nav.skills': { EN: 'Skills', DE: 'Fähigkeiten' },
     'nav.portfolio': { EN: 'Portfolio', DE: 'Portfolio' },
     'nav.contact': { EN: 'Contact', DE: 'Kontakt' },
-    'home.title': { EN: 'Welcome to my Portfolio', DE: 'Willkommen bei meinem Portfolio' },
-    'home.subtitle': { EN: 'Frontend Developer', DE: 'Frontend Entwickler' },
+
+    // Home Section
+    'home.i_am': { EN: 'I am', DE: 'Ich bin' },
+    'home.frontend_developer': { EN: 'FRONTEND DEVELOPER', DE: 'FRONTEND ENTWICKLER' },
+    'home.lets_talk': { EN: "Let's talk!", DE: 'Lass uns reden!' },
+    'home.scroll_down': { EN: 'Scroll down', DE: 'Nach unten' },
+
+    // About Me
     'about.title': { EN: 'About me', DE: 'Über mich' },
     'about.description': {
       EN: 'I am a passionate frontend developer...',
       DE: 'Ich bin ein leidenschaftlicher Frontend Entwickler...',
     },
+
+    // Skills
     'skills.title': { EN: 'My Skills', DE: 'Meine Fähigkeiten' },
+
+    // Portfolio
     'portfolio.title': { EN: 'My Projects', DE: 'Meine Projekte' },
+
+    // Contact
     'contact.title': { EN: 'Contact me', DE: 'Kontaktieren Sie mich' },
     'contact.name': { EN: 'Name', DE: 'Name' },
     'contact.email': { EN: 'Email', DE: 'E-Mail' },
     'contact.message': { EN: 'Message', DE: 'Nachricht' },
     'contact.send': { EN: 'Send', DE: 'Senden' },
+
+    // Footer / Legal
     'footer.legal': { EN: 'Legal Notice', DE: 'Impressum' },
     'footer.privacy': { EN: 'Privacy Policy', DE: 'Datenschutz' },
+
+    // Language names
     'lang.de': { EN: 'German', DE: 'Deutsch' },
     'lang.en': { EN: 'English', DE: 'Englisch' },
   };
@@ -71,7 +85,6 @@ export class TranslationService {
     }
 
     this.translationMap.set(newMap);
-    // Version erhöhen, um alle Pipes zu triggern
     this.translationsVersion.update((v) => v + 1);
   }
 
