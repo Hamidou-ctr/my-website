@@ -1,6 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ScrollService } from '../../service/scroll-service';
+import { TranslationService, Language } from '../../service/translation.service';
 import { Subscription } from 'rxjs';
 import { RouterModule } from '@angular/router';
 
@@ -14,10 +15,19 @@ import { RouterModule } from '@angular/router';
 export class Header implements OnInit, OnDestroy {
   isMenuOpen = false;
   activeSection = '';
+  
+  // Erstelle computed Signale für jede Übersetzung
+  aboutText = computed(() => this.translationService.translate('nav.about'));
+  skillsText = computed(() => this.translationService.translate('nav.skills'));
+  portfolioText = computed(() => this.translationService.translate('nav.portfolio'));
+  contactText = computed(() => this.translationService.translate('nav.contact'));
 
   private subscription!: Subscription;
 
-  constructor(private scrollService: ScrollService) {}
+  constructor(
+    private scrollService: ScrollService,
+    public translationService: TranslationService
+  ) {}
 
   ngOnInit() {
     this.subscription = this.scrollService.activeSection$.subscribe(
@@ -42,5 +52,9 @@ export class Header implements OnInit, OnDestroy {
   scrollTo(section: string) {
     this.scrollService.scrollTo(section);
     this.closeMenu();
+  }
+
+  setLanguage(lang: Language) {
+    this.translationService.setLanguage(lang);
   }
 }

@@ -9,39 +9,43 @@
       <div class="flex gap-4">
         <a
           (click)="scrollTo('about-me')"
-          class="nav-link"
+          class="nav-link cursor-pointer"
           [class.active]="activeSection === 'about-me'"
         >
-          About me
+          {{ aboutText() }}
           <span></span>
         </a>
 
         <a
           (click)="scrollTo('skills')"
-          class="nav-link"
+          class="nav-link cursor-pointer"
           [class.active]="activeSection === 'skills'"
         >
-          Skills
+          {{ skillsText() }}
           <span></span>
         </a>
 
         <a
           (click)="scrollTo('portfolio')"
-          class="nav-link"
+          class="nav-link cursor-pointer"
           [class.active]="activeSection === 'portfolio'"
         >
-          Portfolio
+          {{ portfolioText() }}
           <span></span>
         </a>
       </div>
       <div class="flex gap-2">
         <button
-          class="border border-[#70E61C] px-2 py-1 rounded hover:bg-[#9747FF] text-lg text-white transition-colors"
+          (click)="setLanguage('DE')"
+          class="border border-[#70E61C] px-2 py-1 rounded hover:bg-[#9747FF] text-lg text-white transition-colors cursor-pointer"
+          [class.bg-[#70E61C]]="translationService.currentLang() === 'DE'"
         >
           DE
         </button>
         <button
-          class="border border-[#70E61C] px-2 py-1 rounded hover:bg-[#9747FF] text-lg text-white transition-colors"
+          (click)="setLanguage('EN')"
+          class="border border-[#70E61C] px-2 py-1 rounded hover:bg-[#9747FF] text-lg text-white transition-colors cursor-pointer"
+          [class.bg-[#70E61C]]="translationService.currentLang() === 'EN'"
         >
           EN
         </button>
@@ -62,7 +66,6 @@
       class="fixed inset-0 bg-[#141D2FCC] flex flex-col justify-center items-center z-50 transition-all duration-300 sm:hidden"
       (click)="closeMenu()"
     >
-      <!-- Close Button -->
       <button
         class="absolute top-3 right-5 text-white text-3xl font-bold hover:scale-110 transition-transform"
         (click)="closeMenu()"
@@ -70,50 +73,51 @@
         ✕
       </button>
 
-      <!-- Menu Items -->
       <div
         class="flex flex-col justify-center items-center gap-8"
         (click)="$event.stopPropagation()"
       >
         <a
-          class="text-white text-2xl hover:underline"
           (click)="scrollTo('about-me')"
-          class="nav-link"
+          class="text-white text-2xl hover:underline nav-link"
           [class.active]="activeSection === 'about-me'"
-          >About me</a
         >
+          {{ aboutText() }}
+        </a>
         <a
-          class="text-white text-2xl hover:underline"
           (click)="scrollTo('skills')"
-          class="nav-link"
+          class="text-white text-2xl hover:underline nav-link"
           [class.active]="activeSection === 'skills'"
-          >Skills</a
         >
+          {{ skillsText() }}
+        </a>
         <a
-          class="text-white text-2xl hover:underline"
           (click)="scrollTo('portfolio')"
-          class="nav-link"
+          class="text-white text-2xl hover:underline nav-link"
           [class.active]="activeSection === 'portfolio'"
-          >Portfolio</a
         >
+          {{ portfolioText() }}
+        </a>
         <a
-          class="text-white text-2xl hover:underline"
           (click)="scrollTo('contact')"
-          class="nav-link"
+          class="text-white text-2xl hover:underline nav-link"
           [class.active]="activeSection === 'contact'"
-          >Contact</a
         >
+          {{ contactText() }}
+        </a>
         <div class="flex gap-4 mt-4">
           <button
+            (click)="setLanguage('DE'); closeMenu()"
             class="hover:text-[#9747FF] text-lg text-white transition-colors"
-            (click)="closeMenu()"
+            [class.text-[#70E61C]]="translationService.currentLang() === 'DE'"
           >
             DE
           </button>
           /
           <button
+            (click)="setLanguage('EN'); closeMenu()"
             class="hover:text-[#9747FF] text-lg text-white transition-colors"
-            (click)="closeMenu()"
+            [class.text-[#70E61C]]="translationService.currentLang() === 'EN'"
           >
             EN
           </button>
