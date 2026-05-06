@@ -75,7 +75,11 @@ export class TranslationService {
     },
 
     // Portfolio Section
-    'portfolio.title': { EN: 'My Projects', DE: 'Meine Projekte' },
+    'portfolio.title': { EN: 'Portfolio', DE: 'Portfolio' },
+    'portfolio.description': {
+      EN: 'Explore a selection of my work here - Interact with projects to see my skills in action.',
+      DE: 'Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.',
+    },
 
     // Contact Section
     'contact.title': { EN: 'Contact me', DE: 'Kontaktieren Sie mich' },
