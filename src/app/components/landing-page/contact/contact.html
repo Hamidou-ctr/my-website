@@ -4,24 +4,25 @@
 >
   <div class="w-full flex items-center justify-center gap-4 py-16">
     <p class="bg-[#9747FF] h-1 flex-1"></p>
-    <h1 class="text-5xl xs:text-8xl font-bold">Contact</h1>
+    <h1 class="text-5xl xs:text-8xl font-bold">{{ 'contact.title' | translate }}</h1>
     <p class="h-1 w-24 flex-1"></p>
   </div>
 
   <section
-    class=" max-w-350 flex justify-center items-center flex-col md:items-start lm:flex-row px-6 gap-16"
+    class="max-w-350 flex justify-center items-center flex-col md:items-start lm:flex-row px-6 gap-16"
   >
     <div
       class="w-full lm:w-1/2 flex justify-center flex-col gap-4 pl-[0%] text-base xxs:text-xl xs:text-lg font-normal"
     >
       <h1 class="text-2xl xxs:text-3xl xs:text-4xl font-bold whitespace-nowrap">
-        Got a problem to solve?
+        {{ 'contact.got_problem' | translate }}
       </h1>
       <p>
-        Encourage people to contact you and describe what role you are interested in. Show that you
-        will add value to their projects through your work.
+        {{ 'contact.encourage' | translate }}
       </p>
-      <p>Need a Frontend developer? <b>Contact me!</b></p>
+      <p>
+        {{ 'contact.need_frontend' | translate }} <b>{{ 'contact.contact_me' | translate }}</b>
+      </p>
     </div>
 
     <form
@@ -39,7 +40,7 @@
           <input
             formControlName="name"
             type="text"
-            placeholder="Your name"
+            [placeholder]="'contact.your_name' | translate"
             class="w-full focus:outline-none bg-transparent"
           />
           <div class="flex gap-1">
@@ -52,7 +53,7 @@
           </div>
         </div>
         <p *ngIf="name?.invalid && name?.touched" class="text-red-700 text-sm mt-1">
-          Your name is required
+          {{ 'contact.name_required' | translate }}
         </p>
       </div>
 
@@ -66,7 +67,7 @@
           <input
             formControlName="email"
             type="email"
-            placeholder="Your email"
+            [placeholder]="'contact.your_email' | translate"
             class="w-full focus:outline-none bg-transparent"
           />
           <div class="flex gap-1">
@@ -79,8 +80,10 @@
           </div>
         </div>
         <p *ngIf="email?.invalid && email?.touched" class="text-red-700 text-sm mt-1">
-          <span *ngIf="email?.errors?.['required']">Your email is required</span>
-          <span *ngIf="email?.errors?.['email']">Please enter a valid email</span>
+          <span *ngIf="email?.errors?.['required']">{{
+            'contact.email_required' | translate
+          }}</span>
+          <span *ngIf="email?.errors?.['email']">{{ 'contact.email_valid' | translate }}</span>
         </p>
       </div>
 
@@ -93,7 +96,7 @@
         >
           <textarea
             formControlName="message"
-            placeholder="Your message"
+            [placeholder]="'contact.your_message' | translate"
             rows="4"
             class="w-full focus:outline-none bg-transparent resize-none"
           ></textarea>
@@ -111,7 +114,7 @@
           </div>
         </div>
         <p *ngIf="message?.invalid && message?.touched" class="text-red-700 text-sm mt-1">
-          Your message is required
+          {{ 'contact.message_required' | translate }}
         </p>
       </div>
 
@@ -133,18 +136,22 @@
           </div>
 
           <label class="cursor-pointer" (click)="togglePrivacy()">
-            Ich habe gelesen die
-            <a class="text-[#9747FF] hover:underline" routerLink="/privacy-policy" (click)="$event.stopPropagation()"
-              >Datenschutzbestimmungen</a
+            {{ 'contact.privacy_text_1' | translate }}
+            <a
+              class="text-[#9747FF] hover:underline"
+              routerLink="/privacy-policy"
+              (click)="$event.stopPropagation()"
             >
-            und stimme der beschriebenen Verarbeitung meiner Daten zu.
+              {{ 'contact.privacy_text_2' | translate }}
+            </a>
+            {{ 'contact.privacy_text_3' | translate }}
           </label>
         </div>
         <p
           *ngIf="privacyAccepted?.invalid && privacyAccepted?.touched"
           class="text-red-700 text-sm mt-1"
         >
-          Bitte akzeptieren Sie die Datenschutzerklärung.
+          {{ 'contact.privacy_required' | translate }}
         </p>
       </div>
 
@@ -155,7 +162,7 @@
         [ngClass]="buttonClasses"
         class="w-full max-w-63 mb-10 text-white px-7 py-4 rounded-lg transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {{ isSubmitting ? 'Sending...' : 'Send Message :)' }}
+        {{ (isSubmitting ? 'contact.sending' : 'contact.send_message') | translate }}
       </button>
 
       <p class="w-full flex justify-end items-center mb-10 pl-12">
@@ -174,10 +181,10 @@
         *ngIf="submitSuccess"
         class="submitSuccess text-4xl text-green-500 text-center p-2 rounded"
       >
-        Message sent successfully!
+        {{ 'contact.success' | translate }}
       </div>
       <div *ngIf="submitError" class="submitError text-4xl text-red-500 text-center p-2 rounded">
-        Failed to send message. Please try again.
+        {{ 'contact.error' | translate }}
       </div>
     </form>
   </section>

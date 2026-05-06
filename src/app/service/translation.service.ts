@@ -99,11 +99,47 @@ export class TranslationService {
     },
 
     // Contact Section
-    'contact.title': { EN: 'Contact me', DE: 'Kontaktieren Sie mich' },
-    'contact.name': { EN: 'Name', DE: 'Name' },
-    'contact.email': { EN: 'Email', DE: 'E-Mail' },
-    'contact.message': { EN: 'Message', DE: 'Nachricht' },
-    'contact.send': { EN: 'Send', DE: 'Senden' },
+    'contact.title': { EN: 'Contact', DE: 'Kontakt' },
+    'contact.got_problem': { EN: 'Got a problem to solve?', DE: 'Haben Sie ein Problem zu lösen?' },
+    'contact.encourage': {
+      EN: 'Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.',
+      DE: 'Ermutigen Sie Menschen, Sie zu kontaktieren und beschreiben Sie, für welche Rolle Sie interessiert sind. Zeigen Sie, dass Sie durch Ihre Arbeit einen Mehrwert für ihre Projekte schaffen.',
+    },
+    'contact.need_frontend': {
+      EN: 'Need a Frontend developer?',
+      DE: 'Brauchen Sie einen Frontend-Entwickler?',
+    },
+    'contact.contact_me': { EN: 'Contact me!', DE: 'Kontaktieren Sie mich!' },
+    'contact.your_name': { EN: 'Your name', DE: 'Ihr Name' },
+    'contact.your_email': { EN: 'Your email', DE: 'Ihre E-Mail' },
+    'contact.your_message': { EN: 'Your message', DE: 'Ihre Nachricht' },
+    'contact.name_required': { EN: 'Your name is required', DE: 'Ihr Name ist erforderlich' },
+    'contact.email_required': { EN: 'Your email is required', DE: 'Ihre E-Mail ist erforderlich' },
+    'contact.email_valid': {
+      EN: 'Please enter a valid email',
+      DE: 'Bitte geben Sie eine gültige E-Mail ein',
+    },
+    'contact.message_required': {
+      EN: 'Your message is required',
+      DE: 'Ihre Nachricht ist erforderlich',
+    },
+    'contact.privacy_text_1': { EN: 'I have read the', DE: 'Ich habe die' },
+    'contact.privacy_text_2': { EN: 'Privacy Policy', DE: 'Datenschutzbestimmungen' },
+    'contact.privacy_text_3': {
+      EN: 'and agree to the processing of my data as described.',
+      DE: 'gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.',
+    },
+    'contact.privacy_required': {
+      EN: 'Please accept the privacy policy.',
+      DE: 'Bitte akzeptieren Sie die Datenschutzerklärung.',
+    },
+    'contact.sending': { EN: 'Sending...', DE: 'Senden...' },
+    'contact.send_message': { EN: 'Send Message :)', DE: 'Nachricht senden :)' },
+    'contact.success': { EN: 'Message sent successfully!', DE: 'Nachricht erfolgreich gesendet!' },
+    'contact.error': {
+      EN: 'Failed to send message. Please try again.',
+      DE: 'Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.',
+    },
 
     // Footer / Legal
     'footer.legal': { EN: 'Legal Notice', DE: 'Impressum' },

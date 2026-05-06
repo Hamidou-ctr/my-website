@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ScrollService } from '../../../service/scroll-service';
-import { RouterLink } from "@angular/router";
+import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '../../../service/translate.pipe';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterLink],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink, TranslatePipe],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
