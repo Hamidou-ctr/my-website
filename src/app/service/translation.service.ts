@@ -142,8 +142,7 @@ export class TranslationService {
     },
 
     // Footer / Legal
-    'footer.legal': { EN: 'Legal Notice', DE: 'Impressum' },
-    'footer.privacy': { EN: 'Privacy Policy', DE: 'Datenschutz' },
+    'footer.legal_notice': { EN: 'Legal Notice', DE: 'Impressum' },
 
     // Language names
     'lang.de': { EN: 'German', DE: 'Deutsch' },
