@@ -54,8 +54,8 @@ export class TranslationService {
     'skills.title': { EN: 'My Skills', DE: 'Meine Fähigkeiten' },
     'skills.continually_learning': { EN: 'Continually Learning', DE: 'Kontinuierliches Lernen' },
     'skills.description': {
-      EN: 'I am proficient in a variety of programming languages and frameworks, including HTML, CSS, JavaScript, React, and more. My expertise extends to responsive design, ensuring that applications look great on all devices. I am also familiar with version control systems like Git, which allows for efficient collaboration and code management.',
-      DE: 'Ich beherrsche eine Vielzahl von Programmiersprachen und Frameworks, darunter HTML, CSS, JavaScript, React und mehr. Meine Expertise erstreckt sich auf responsives Design, um sicherzustellen, dass Anwendungen auf allen Geräten gut aussehen. Ich bin auch mit Versionskontrollsystemen wie Git vertraut, was eine effiziente Zusammenarbeit und Codeverwaltung ermöglicht.',
+      EN: 'Show that you have used a variety of front-end technologies in your projects.',
+      DE: 'Zeigen Sie, dass Sie in Ihren Projekten eine Vielzahl von Frontend-Technologien eingesetzt haben.',
     },
     'skills.looking_for': {
       EN: 'Looking for',
@@ -79,6 +79,23 @@ export class TranslationService {
     'portfolio.description': {
       EN: 'Explore a selection of my work here - Interact with projects to see my skills in action.',
       DE: 'Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.',
+    },
+
+    // Project Section
+    'project.live_test': { EN: 'Live Test', DE: 'Live-Test' },
+    'project.github': { EN: 'GitHub', DE: 'GitHub' },
+    'project.no_projects': { EN: 'No projects available', DE: 'Keine Projekte verfügbar' },
+    'project.join.description': {
+      EN: 'Together with other training participants, I co-developed a web-based task management tool inspired by the Kanban system. Using HTML, CSS, JavaScript, and Firebase, we built a collaborative app with drag-and-drop functionality and task assignment by user and category. Git was used for version control and teamwork coordination.',
+      DE: 'Zusammen mit anderen Teilnehmern der Ausbildung habe ich ein webbasiertes Task-Management-Tool entwickelt, das vom Kanban-System inspiriert ist. Mit HTML, CSS, JavaScript und Firebase haben wir eine kollaborative App mit Drag-and-Drop-Funktionalität und Aufgabenverwaltung nach Benutzer und Kategorie erstellt. Git wurde für die Versionskontrolle und Teamkoordination verwendet.',
+    },
+    'project.pollo_loco.description': {
+      EN: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      DE: 'Spring-, Lauf- und Wurfspiel basierend auf objektorientiertem Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.',
+    },
+    'project.da_bubble.description': {
+      EN: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization. Users can create channels for different projects or topics, share files, and integrate with various tools to streamline workflows. The app fosters seamless communication, making it an essential tool for modern teams to stay connected and productive.',
+      DE: 'Diese App ist eine Slack-Clone-App. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeitnachrichten und robuster Kanalorganisation. Benutzer können Kanäle für verschiedene Projekte oder Themen erstellen, Dateien teilen und sich mit verschiedenen Tools integrieren, um Arbeitsabläufe zu optimieren. Die App fördert eine nahtlose Kommunikation und ist damit ein unverzichtbares Werkzeug für moderne Teams, um in Verbindung zu bleiben und produktiv zu sein.',
     },
 
     // Contact Section

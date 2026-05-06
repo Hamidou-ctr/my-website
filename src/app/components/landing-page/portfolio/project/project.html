@@ -15,7 +15,7 @@
     >
       <h1 class="text-4xl font-bold text-[#9747FF]">{{ project.name }}</h1>
       <p class="text-2xl font-normal text-[#70E61C]">{{ project.language }}</p>
-      <p class="text-lg font-normal">{{ project.description }}</p>
+      <p class="text-lg font-normal">{{ getProjectDescription(project.id) | translate }}</p>
       <div
         class="flex items-center gap-[10%] xxs:gap-[30%] xs:gap-24 md:gap-8 lm:gap-20 lt:gap-24 text-2xl font-normal md:justify-start"
         [class.justify-end]="idx % 2 === 1"
@@ -24,19 +24,19 @@
           <button
             class="bg-[#9747FF] hover:bg-[#70E61C] text-nowrap text-white px-4 py-2 xs:px-8 xs:py-4 rounded-xl"
           >
-            Live Test
+            {{ 'project.live_test' | translate }}
           </button>
         </a>
         <a [href]="project.githubUrl" target="_blank">
           <button
             class="hover:bg-[#70E61C] border-[#70E61C] border text-white px-4 py-2 xs:px-8 xs:py-4 rounded-xl"
           >
-            GitHub
+            {{ 'project.github' | translate }}
           </button>
         </a>
       </div>
     </div>
   </section>
 } @empty {
-  <h1>Keine Projekte verfügbar</h1>
+  <h1>{{ 'project.no_projects' | translate }}</h1>
 }
