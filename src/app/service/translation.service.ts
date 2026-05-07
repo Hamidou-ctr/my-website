@@ -29,7 +29,7 @@ export class TranslationService {
     'home.i_am': { EN: 'I am', DE: 'Ich bin' },
     'home.frontend_developer': { EN: 'FRONTEND DEVELOPER', DE: 'FRONTEND ENTWICKLER' },
     'home.lets_talk': { EN: "Let's talk!", DE: 'Lass uns reden!' },
-    'home.scroll_down': { EN: 'Scroll down', DE: 'Nach unten scrollen' },
+    'home.scroll_down': { EN: 'Scroll down', DE: 'Nach unten' },
 
     // About Me Section
     'about.title': { EN: 'About me', DE: 'Über mich' },
