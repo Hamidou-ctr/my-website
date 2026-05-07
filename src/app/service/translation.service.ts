@@ -51,7 +51,7 @@ export class TranslationService {
     },
 
     // Skills Section
-    'skills.title': { EN: 'My Skills', DE: 'Meine Fähigkeiten' },
+    'skills.title': { EN: 'My Skills', DE: 'Fähigkeiten' },
     'skills.continually_learning': { EN: 'Continually Learning', DE: 'Kontinuierliches Lernen' },
     'skills.description': {
       EN: 'Show that you have used a variety of front-end technologies in your projects.',
@@ -59,7 +59,7 @@ export class TranslationService {
     },
     'skills.looking_for': {
       EN: 'Looking for',
-      DE: 'Auf der Suche nach',
+      DE: ' Suche nach',
     },
     'skills.another_skill': {
       EN: 'another skill',
