@@ -1,38 +1,132 @@
-<section class="container mx-auto min-h-[calc(100vh-250px)] mt-20 px-4 py-8 text-white">
+<div
+  class="mx-auto min-h-[calc(100vh-250px)] mt-20 text-white py-20 px-4 sm:px-8 md:px-16 lg:px-24"
+>
   <a
     routerLink="/"
     fragment="contact"
     class="text-2xl bg-[#70E61C] font-normal top-24 ml-[90%] px-4 py-2 rounded-md transition-colors duration-300 hover:bg-[#9747FF]"
   >
-    <button>Back</button>
+    <button>{{ 'privacy.back_button' | translate }}</button>
   </a>
-  <h1 class="text-3xl font-bold mb-4">Privacy Policy</h1>
-  <p class="mb-4">
-    At Hamidou Sarr's Portfolio, we are committed to protecting your privacy. This Privacy Policy
-    explains how we collect, use, and safeguard your personal information when you visit our
-    website.
-  </p>
-  <h2 class="text-2xl font-bold mb-4">Information We Collect</h2>
-  <p class="mb-4">
-    We may collect personal information such as your name, email address, and any other information
-    you voluntarily provide when you contact us through our website or subscribe to our newsletter.
-  </p>
-  <h2 class="text-2xl font-bold mb-4">How We Use Your Information</h2>
-  <p class="mb-4">
-    We use the information we collect to respond to your inquiries, provide you with updates about
-    our services, and improve our website. We do not sell or share your personal information with
-    third parties for marketing purposes.
-  </p>
-  <h2 class="text-2xl font-bold mb-4">Data Security</h2>
-  <p class="mb-4">
-    We take reasonable measures to protect your personal information from unauthorized access, use,
-    or disclosure. However, please be aware that no method of transmission over the internet or
-    method of electronic storage is completely secure.
-  </p>
-  <h2 class="text-2xl font-bold mb-4">Your Rights</h2>
-  <p class="mb-4">
-    You have the right to access, correct, or delete your personal information. If you wish to
-    exercise any of these rights, please contact us using the contact information provided on our
-    website.
-  </p>
-</section>
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold mb-8 text-center">
+      {{ 'privacy.title' | translate }}
+    </h1>
+
+    <p class="text-gray-300 mb-8 leading-relaxed">
+      {{ 'privacy.description' | translate }}
+    </p>
+
+    <!-- 1. Controller -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'privacy.controller_heading' | translate }}
+      </h2>
+      <p class="text-gray-300 leading-relaxed whitespace-pre-line">
+        {{ 'privacy.controller_content' | translate }}
+        <a href="mailto:hamiduguinea@gmail.com" class="text-[#9747FF] hover:underline"
+          >hamiduguinea@gmail.com</a
+        >
+      </p>
+    </div>
+
+    <!-- 2. Collected Data -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'privacy.collected_data_heading' | translate }}
+      </h2>
+      <p class="text-gray-300 leading-relaxed">
+        {{ 'privacy.collected_data_content' | translate }}
+      </p>
+    </div>
+
+    <!-- 3. Contact Form -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'privacy.contact_form_heading' | translate }}
+      </h2>
+      <p class="text-gray-300 leading-relaxed whitespace-pre-line">
+        {{ 'privacy.contact_form_content' | translate }}
+      </p>
+    </div>
+
+    <!-- 4. Legal Basis -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'privacy.legal_basis_heading' | translate }}
+      </h2>
+      <p class="text-gray-300 leading-relaxed">
+        {{ 'privacy.legal_basis_content' | translate }}
+      </p>
+    </div>
+
+    <!-- 5. Hosting -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'privacy.hosting_heading' | translate }}
+      </h2>
+      <p class="text-gray-300 leading-relaxed">
+        {{ 'privacy.hosting_content' | translate }}
+      </p>
+    </div>
+
+    <!-- 6. GitHub Links -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'privacy.github_links_heading' | translate }}
+      </h2>
+      <p class="text-gray-300 leading-relaxed">
+        {{ 'privacy.github_links_content' | translate }}
+      </p>
+    </div>
+
+    <!-- 7. Your Rights -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'privacy.your_rights_heading' | translate }}
+      </h2>
+      <p class="text-gray-300 mb-2">{{ 'privacy.your_rights_intro' | translate }}</p>
+      <ul class="list-disc list-inside text-gray-300 space-y-1 ml-4">
+        <li>{{ 'privacy.your_rights_list_1' | translate }}</li>
+        <li>{{ 'privacy.your_rights_list_2' | translate }}</li>
+        <li>{{ 'privacy.your_rights_list_3' | translate }}</li>
+        <li>{{ 'privacy.your_rights_list_4' | translate }}</li>
+        <li>{{ 'privacy.your_rights_list_5' | translate }}</li>
+        <li>{{ 'privacy.your_rights_list_6' | translate }}</li>
+      </ul>
+      <p class="text-gray-300 mt-4">
+        {{ 'privacy.contact_me_text' | translate }}
+        <a href="mailto:hamiduguinea@gmail.com" class="text-[#9747FF] hover:underline"
+          >hamiduguinea@gmail.com</a
+        >
+      </p>
+    </div>
+
+    <!-- 8. Right to Lodge a Complaint -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'privacy.complaint_right_heading' | translate }}
+      </h2>
+      <p class="text-gray-300 leading-relaxed">
+        {{ 'privacy.complaint_right_content' | translate }}
+      </p>
+    </div>
+
+    <!-- 9. Changes to the Privacy Policy -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'privacy.changes_heading' | translate }}
+      </h2>
+      <p class="text-gray-300 leading-relaxed">
+        {{ 'privacy.changes_content' | translate }}
+      </p>
+    </div>
+
+    <!-- Last Updated -->
+    <div class="mt-12 pt-6 border-t border-gray-700">
+      <p class="text-gray-400 text-sm italic">
+        {{ 'privacy.last_updated' | translate }}
+      </p>
+    </div>
+  </div>
+</div>

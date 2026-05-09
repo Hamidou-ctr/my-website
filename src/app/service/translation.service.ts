@@ -144,6 +144,126 @@ export class TranslationService {
     // Footer / Legal
     'footer.legal_notice': { EN: 'Legal Notice', DE: 'Impressum' },
 
+    // Privacy Policy Section
+    'privacy.title': {
+      EN: 'Privacy Policy',
+      DE: 'Datenschutzerklärung',
+    },
+    'privacy.back_button': {
+      EN: 'Back',
+      DE: 'Zurück',
+    },
+    'privacy.description': {
+      EN: 'This privacy policy informs you about the nature, scope, and purpose of the processing of personal data within my online offering.',
+      DE: 'Diese Datenschutzerklärung informiert Sie über Art, Umfang und Zweck der Verarbeitung von personenbezogenen Daten innerhalb meines Online-Angebots.',
+    },
+    'privacy.controller_heading': {
+      EN: '1. Controller',
+      DE: '1. Verantwortlicher',
+    },
+    'privacy.controller_content': {
+      EN: 'Hamidou Diallo\nEmail:',
+      DE: 'Hamidou Diallo\nE-Mail:',
+    },
+    'privacy.collected_data_heading': {
+      EN: '2. Collected Data',
+      DE: '2. Erfasste Daten',
+    },
+    'privacy.collected_data_content': {
+      EN: 'When visiting this website, no personal data is automatically collected. No cookies are set, and no tracking takes place.',
+      DE: 'Beim Besuch dieser Website werden keine personenbezogenen Daten automatisch erfasst. Es werden keine Cookies gesetzt und es findet kein Tracking statt.',
+    },
+    'privacy.contact_form_heading': {
+      EN: 'Contact Form',
+      DE: 'Kontaktformular',
+    },
+    'privacy.contact_form_content': {
+      EN: 'If you contact me via the contact form, the following data will be processed:\n– Name\n– Email address\n– Your message\n\nThis data is used exclusively to process your request and will not be shared with third parties.',
+      DE: 'Wenn Sie mich über das Kontaktformular kontaktieren, werden folgende Daten verarbeitet:\n– Name\n– E-Mail-Adresse\n– Ihre Nachricht\n\nDiese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.',
+    },
+    'privacy.legal_basis_heading': {
+      EN: '3. Legal Basis of Processing',
+      DE: '3. Rechtsgrundlage der Verarbeitung',
+    },
+    'privacy.legal_basis_content': {
+      EN: 'The processing of your data is carried out in accordance with Art. 6(1)(b) GDPR (for the fulfillment of a contract or pre-contractual measures).',
+      DE: 'Die Verarbeitung Ihrer Daten erfolgt gemäß Art. 6 Abs. 1 lit. b DSGVO (zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen).',
+    },
+    'privacy.hosting_heading': {
+      EN: '4. Hosting',
+      DE: '4. Hosting',
+    },
+    'privacy.hosting_content': {
+      EN: 'This website is hosted by Hetzner Online GmbH. The servers are located in Germany. Hetzner processes personal data only according to our instructions and within the framework of a data processing agreement in accordance with Art. 28 GDPR.',
+      DE: 'Diese Website wird von der Hetzner Online GmbH gehostet. Die Server befinden sich in Deutschland. Hetzner verarbeitet personenbezogene Daten nur nach unseren Weisungen und im Rahmen eines Auftragsverarbeitungsvertrags gemäß Art. 28 DSGVO.',
+    },
+    'privacy.github_links_heading': {
+      EN: '5. GitHub Links',
+      DE: '5. GitHub-Links',
+    },
+    'privacy.github_links_content': {
+      EN: 'This website contains links to my GitHub profile. When you click on a GitHub link, you will be redirected to the GitHub platform (GitHub Inc., USA). No data is transferred from your side to GitHub through my website.',
+      DE: 'Diese Website enthält Links zu meinem GitHub-Profil. Wenn Sie auf einen GitHub-Link klicken, werden Sie auf die GitHub-Plattform (GitHub Inc., USA) weitergeleitet. Über meine Website werden keine Daten von Ihrer Seite an GitHub übertragen.',
+    },
+    'privacy.your_rights_heading': {
+      EN: '6. Your Rights',
+      DE: '6. Ihre Rechte',
+    },
+    'privacy.your_rights_intro': {
+      EN: 'You have the right:',
+      DE: 'Sie haben das Recht:',
+    },
+    'privacy.your_rights_list_1': {
+      EN: 'to access the stored personal data (Art. 15 GDPR),',
+      DE: 'auf Auskunft über die gespeicherten personenbezogenen Daten (Art. 15 DSGVO),',
+    },
+    'privacy.your_rights_list_2': {
+      EN: 'to rectification of inaccurate data (Art. 16 GDPR),',
+      DE: 'auf Berichtigung unrichtiger Daten (Art. 16 DSGVO),',
+    },
+    'privacy.your_rights_list_3': {
+      EN: 'to erasure (Art. 17 GDPR),',
+      DE: 'auf Löschung (Art. 17 DSGVO),',
+    },
+    'privacy.your_rights_list_4': {
+      EN: 'to restriction of processing (Art. 18 GDPR),',
+      DE: 'auf Einschränkung der Verarbeitung (Art. 18 DSGVO),',
+    },
+    'privacy.your_rights_list_5': {
+      EN: 'to data portability (Art. 20 GDPR),',
+      DE: 'auf Datenübertragbarkeit (Art. 20 DSGVO),',
+    },
+    'privacy.your_rights_list_6': {
+      EN: 'to object to the processing (Art. 21 GDPR).',
+      DE: 'auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO).',
+    },
+    'privacy.contact_me_text': {
+      EN: 'Please contact me at:',
+      DE: 'Bitte kontaktieren Sie mich unter:',
+    },
+    'privacy.complaint_right_heading': {
+      EN: '7. Right to Lodge a Complaint',
+      DE: '7. Recht auf Beschwerde',
+    },
+    'privacy.complaint_right_content': {
+      EN: 'You have the right to lodge a complaint with the competent supervisory authority if you believe that the processing of your personal data violates the GDPR.',
+      DE: 'Sie haben das Recht, Beschwerde bei der zuständigen Aufsichtsbehörde einzulegen, wenn Sie der Meinung sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt.',
+    },
+    'privacy.changes_heading': {
+      EN: '8. Changes to the Privacy Policy',
+      DE: '8. Änderungen der Datenschutzerklärung',
+    },
+    'privacy.changes_content': {
+      EN: 'I reserve the right to amend this privacy policy in the event of changes to the website or legal requirements. Please check regularly for the current status.',
+      DE: 'Ich behalte mir vor, diese Datenschutzerklärung bei Änderungen der Website oder gesetzlicher Anforderungen anzupassen. Bitte überprüfen Sie regelmäßig den aktuellen Stand.',
+    },
+    'privacy.last_updated': {
+      EN: 'Last updated: April 2025',
+      DE: 'Zuletzt aktualisiert: April 2025',
+    },
+
+    // legal notice
+
     // Language names
     'lang.de': { EN: 'German', DE: 'Deutsch' },
     'lang.en': { EN: 'English', DE: 'Englisch' },
