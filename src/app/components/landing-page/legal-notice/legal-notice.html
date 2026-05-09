@@ -1,34 +1,91 @@
-<section class="container mx-auto min-h-[calc(100vh-250px)] mt-20 px-4 py-8 text-white">
+<section
+  class="mx-auto min-h-[calc(100vh-250px)] mt-20 text-white py-20 px-4 sm:px-8 md:px-16 lg:px-24"
+>
   <a
     routerLink="/"
     fragment="contact"
-    class="text-2xl bg-[#70E61C] font-normal top-24 ml-[90%] px-4 py-2 rounded-md transition-colors duration-300 hover:bg-[#9747FF]"
+    class="text-2xl bg-[#70E61C] font-normal ml-[60%] xxs:ml-[70%] xsm:ml-[80%] md:ml-[90%] px-4 py-2 rounded-md transition-colors duration-300 hover:bg-[#9747FF]"
   >
-    <button>Back</button>
+    <button>{{ 'privacy.back_button' | translate }}</button>
   </a>
-  <h1 class="text-3xl font-bold mb-4">Legal Notice</h1>
-  <p class="mb-4">
-    This website is owned and operated by Hamidou Sarr. The content provided on this website is for
-    informational purposes only. We make no representations or warranties of any kind, express or
-    implied, about the completeness, accuracy, reliability, suitability, or availability with
-    respect to the website or the information, products, services, or related graphics contained on
-    the website for any purpose. Any reliance you place on such information is therefore strictly at
-    your own risk.
-  </p>
-  <p class="mb-4">
-    In no event will we be liable for any loss or damage including without limitation, indirect or
-    consequential loss or damage, or any loss or damage whatsoever arising out of or in connection
-    with the use of this website.
-  </p>
-  <p class="mb-4">
-    Through this website, you may be able to link to other websites which are not under the control
-    of Hamidou Sarr. We have no control over the nature, content, and availability of those sites.
-    The inclusion of any links does not necessarily imply a recommendation or endorse the views
-    expressed within them.
-  </p>
-  <p class="mb-4">
-    Every effort is made to keep the website up and running smoothly. However, Hamidou Sarr takes no
-    responsibility for, and will not be liable for, the website being temporarily unavailable due to
-    technical issues beyond our control.
-  </p>
+  <div class="max-w-4xl mx-auto mt-6 md:mt-0">
+    <h1 class="text-4xl md:text-5xl font-bold mb-8 text-center">
+      {{ 'legal_notice.title' | translate }}
+    </h1>
+
+    <!-- Information according to § 5 TMG -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'legal_notice.provider_heading' | translate }}
+      </h2>
+      <p
+        class="text-gray-300 leading-relaxed"
+        [innerHTML]="'legal_notice.provider_content' | translate"
+      ></p>
+    </div>
+
+    <!-- Represented by -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'legal_notice.represented_by_heading' | translate }}
+      </h2>
+      <p class="text-gray-300 leading-relaxed">
+        {{ 'legal_notice.represented_by_content' | translate }}
+      </p>
+    </div>
+
+    <!-- Dispute Resolution -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'legal_notice.dispute_resolution_heading' | translate }}
+      </h2>
+      <p class="text-gray-300 leading-relaxed">
+        {{ 'legal_notice.dispute_resolution_heading' | translate }}
+      </p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'legal_notice.liability_heading' | translate }}
+      </h2>
+
+      <!-- Liability for Contents -->
+      <div class="mb-4">
+        <h3 class="text-xl font-semibold mb-2 text-[#9747FF]">
+          {{ 'legal_notice.liability_content_heading_1' | translate }}
+        </h3>
+        <p class="text-gray-300 leading-relaxed">
+          {{ 'legal_notice.liability_content_1' | translate }}
+        </p>
+      </div>
+
+      <!-- Liability for Links -->
+      <div class="mb-4">
+        <h3 class="text-xl font-semibold mb-2 text-[#9747FF]">
+          {{ 'legal_notice.liability_content_heading_2' | translate }}
+        </h3>
+        <p class="text-gray-300 leading-relaxed">
+          {{ 'legal_notice.liability_content_2' | translate }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold mb-3 text-[#70E61C]">
+        {{ 'legal_notice.copyright_heading' | translate }}
+      </h2>
+      <p class="text-gray-300 leading-relaxed">
+        {{ 'legal_notice.copyright_content' | translate }}
+      </p>
+    </div>
+
+    <!-- Last Updated -->
+    <div class="mt-12 pt-6 border-t border-gray-700">
+      <p class="text-gray-400 text-sm italic">
+        {{ 'legal_notice.last_updated' | translate }}
+      </p>
+    </div>
+  </div>
 </section>

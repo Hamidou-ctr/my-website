@@ -141,7 +141,7 @@ export class TranslationService {
       DE: 'Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.',
     },
 
-    // Footer / Legal
+    // Footer
     'footer.legal_notice': { EN: 'Legal Notice', DE: 'Impressum' },
 
     // Privacy Policy Section
@@ -259,10 +259,66 @@ export class TranslationService {
     },
     'privacy.last_updated': {
       EN: 'Last updated: April 2025',
-      DE: 'Zuletzt aktualisiert: April 2025',
+      DE: 'Zuletzt aktualisiert:  April 2026',
     },
 
-    // legal notice
+    // Legal Notice Section
+    'legal_notice.title': {
+      EN: 'Legal Notice',
+      DE: 'Impressum',
+    },
+    'legal_notice.provider_heading': {
+      EN: 'Information according to § 5 TMG',
+      DE: 'Angaben gemäß § 5 TMG',
+    },
+    'legal_notice.provider_content': {
+      EN: 'Hamidou Diallo<br>Email: hamiduguinea@gmail.com<br>Residence: Germany',
+      DE: 'Hamidou Diallo<br>E-Mail: hamiduguinea@gmail.com<br>Wohnort: Deutschland',
+    },
+    'legal_notice.dispute_resolution_heading': {
+      EN: 'Dispute Resolution',
+      DE: 'Streitbeilegung',
+    },
+    'legal_notice.represented_by_heading': {
+      EN: 'Represented by',
+      DE: 'Vertreten durch',
+    },
+    'legal_notice.represented_by_content': {
+      EN: 'Hamidou Diallo',
+      DE: 'Hamidou Diallo',
+    },
+    'legal_notice.liability_heading': {
+      EN: 'Disclaimer',
+      DE: 'Haftungsausschluss',
+    },
+    'legal_notice.liability_content_heading_1': {
+      EN: 'Liability for Contents',
+      DE: 'Haftung für Inhalte',
+    },
+    'legal_notice.liability_content_1': {
+      EN: 'The contents of this website were created with the utmost care. However, I cannot guarantee the accuracy, completeness, or up-to-dateness of the contents.',
+      DE: 'Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen.',
+    },
+    'legal_notice.liability_content_heading_2': {
+      EN: 'Liability for Links',
+      DE: 'Haftung für Links',
+    },
+    'legal_notice.liability_content_2': {
+      EN: 'This website contains links to external third-party websites (e.g., GitHub), on whose content I have no influence. Therefore, I cannot assume any liability for these external contents. The respective provider or operator of the linked pages is always responsible for their content.',
+      DE: 'Diese Website enthält Links zu externen Websites Dritter (z.B. GitHub), auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte keine Haftung übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.',
+    },
+    'legal_notice.copyright_heading': {
+      EN: 'Copyright',
+      DE: 'Urheberrecht',
+    },
+    'legal_notice.copyright_content': {
+      EN: 'The content and works created by me on this website are subject to German copyright law. Contributions by third parties are marked as such. The duplication, editing, distribution, and any kind of use outside the limits of copyright law require my written consent.',
+      DE: 'Die durch mich erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen meiner schriftlichen Zustimmung.',
+    },
+    'legal_notice.last_updated': {
+      EN: 'Last updated: April 2025',
+      DE: 'Zuletzt aktualisiert: April 2026',
+    },
 
     // Language names
     'lang.de': { EN: 'German', DE: 'Deutsch' },
