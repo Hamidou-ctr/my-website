@@ -1,6 +1,6 @@
 .nav-link {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
   color: white;
@@ -34,4 +34,10 @@
 /* Optional: aktive Textfarbe */
 .nav-link.active {
   color: #70e61c;
+}
+
+@media screen and (min-width: 698px) {
+  .nav-link {
+    font-size: 1.5rem;
+  }
 }
