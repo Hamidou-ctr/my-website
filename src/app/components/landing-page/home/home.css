@@ -11,22 +11,36 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: 120vw;
+  background-size: 80vw;
+  background-position-y: top;
 }
 
 /* Mobile First */
 
 @media screen and (min-width: 360px) {
   .personal-image {
-    background-size: 70vw;
+    background-size: 65vw;
     background-attachment: scroll;
-    background-position-y: top;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  .personal-image {
+    background-size: 60vw;
+    background-attachment: scroll;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .personal-image {
+    background-size: 55vw;
+    background-attachment: scroll;
   }
 }
 
 @media screen and (min-width: 550px) {
   .personal-image {
-    background-size: 60vw;
+    background-size: 45vw;
     background-attachment: scroll;
     background-position-y: top;
   }
@@ -36,7 +50,7 @@
   .homeBackgroundImage {
     background-size: 100vw 50vh;
     background-attachment: scroll;
-    background-position-y: 58vh;
+    background-position-y: 50vh;
   }
 
   .personal-image {
